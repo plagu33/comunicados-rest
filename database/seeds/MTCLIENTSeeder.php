@@ -4,13 +4,137 @@ use Illuminate\Database\Seeder;
 
 class MTCLIENTSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+
     public function run()
     {
-        //
+
+        $mtclient = new \App\MTCLIENT();
+        $mtclient->CODCLI = '16340395';
+        $mtclient->DIG = '1';
+        $mtclient->PATERNO = 'MERIÑO';
+        $mtclient->MATERNO = 'CÁCERES';
+        $mtclient->NOMBRE = 'MANUEL ARTURO';
+        $mtclient->SEXO = 'M';
+        $mtclient->NACIONALIDAD = 'CHILENA';
+        $mtclient->DOBLENACION = '';
+        $mtclient->TIPOVISA = 'ESTUDIO';
+        $mtclient->PASAPORTE = '';
+        $mtclient->FECNAC = '17/06/1986 0:00:00';
+        $mtclient->CODESTCIVIL = 'SOLTERO';
+        $mtclient->CODSISSALUD = '37';
+        $mtclient->DIRPROC = 'PADRE MIGUEL DE OLIVAR 1444 DEPTO 1609 PISO 16';
+        $mtclient->CIUPROC = 'SANTIAGO';
+        $mtclient->COMUNAPRO = 'SANTIAGO';
+        $mtclient->FONOPROC = '67391357';
+        $mtclient->DIRACTUAL = 'PADRE MIGUEL DE OLIVAR 1444 DEPTO 1609 PISO 16';
+        $mtclient->COMUNA = 'SANTIAGO';
+        $mtclient->CIUDADACT = 'SANTIAGO';
+        $mtclient->FONOACT = '67391357';
+        $mtclient->COLEGIO = '9897';
+        $mtclient->ANOEEM = '2008';
+        $mtclient->NOTAEM = '5';
+        $mtclient->UNIVERSIDAD = '';
+        $mtclient->ES_PAIS = '';
+        $mtclient->ES_CIUDAD = '';
+        $mtclient->ES_CARR = '';
+        $mtclient->ES_TITULADO = 'N';
+        $mtclient->ES_TITULO = '';
+        $mtclient->ES_ULANO = '';
+        $mtclient->ES_SEMAP = '';
+        $mtclient->AL_ACTIVI = '';
+        $mtclient->AL_EMP = '';
+        $mtclient->AL_DIRCOM = '';
+        $mtclient->AL_FONO = '';
+        $mtclient->CODAPOD = '16340395';
+        $mtclient->DOCUMENTADO = '';
+        $mtclient->FECDOC = '';
+        $mtclient->ARAN_BAS = '';
+        $mtclient->FECARBAS = '';
+        $mtclient->CIUDNAC = 'SANTIAGO';
+        $mtclient->ANO = '2016';
+        $mtclient->EMERGENCIA = 'XIMENA CÁCERES (MAMÁ)';
+        $mtclient->FONOEMERG = '7115542';
+        $mtclient->USUARIO = '7680';
+        $mtclient->FECMOD = '12/02/2016 0:00:00';
+        $mtclient->RUTCLI = '';
+        $mtclient->DOLENCIA = '';
+        $mtclient->MAIL = 'manuel.merino.c@gmail.com';
+        $mtclient->CONTRAINDICACION = '';
+        $mtclient->ANOINGRESO = '';
+        $mtclient->PERIODO = '';
+        $mtclient->VIGENTE = '';
+        $mtclient->FEC_MAT = '';
+        $mtclient->FECING = '';
+        $mtclient->CODAVAL = '16340395';
+        $mtclient->CODASEGURADO = '16340395';
+        $mtclient->VIADMISION = '1';
+        $mtclient->ACHSCCAF18 = '';
+        $mtclient->LOCALIDADACT = '';
+        $mtclient->LOCALIDADPRO = '';
+        $mtclient->MATRICULABLE = '';
+        $mtclient->DEUDA_BIBLIOTECA = '';
+        $mtclient->CODMEDIO = '13';
+        $mtclient->VIACONSULTA = '3';
+        $mtclient->DESBL_TOMARAMOS = '';
+        $mtclient->CATEGORIA = '1';
+        $mtclient->CODEMPRESA = '';
+        $mtclient->CODTRAMO = '10';
+        $mtclient->CODMOTIVO = '11';
+        $mtclient->REGLICEM = '';
+        $mtclient->NUMINSCRIPCION = '';
+        $mtclient->FECHAINSCRIP = '';
+        $mtclient->CIRCUNSCRIPCION = '';
+        $mtclient->ANOINSCRIP = '';
+        $mtclient->DEUDA = '0';
+        $mtclient->NROHIJOS = '';
+        $mtclient->ATRABAJADO = '';
+        $mtclient->CELULARACT = '';
+        $mtclient->ES_PROMEDIONOTAS = '';
+        $mtclient->ES_UNIVERSIDADEXT = '';
+        $mtclient->TIPOMERITO = '';
+        $mtclient->LUGARCURSO = '';
+        $mtclient->DESCMERITO = '';
+        $mtclient->TIPODEPORTE = '';
+        $mtclient->DESCDEPORTE = '';
+        $mtclient->CARRERAORIGEN = '';
+        $mtclient->CARRERADESTINO = '';
+        $mtclient->INSTITUCION = '';
+        $mtclient->PAIS = '';
+        $mtclient->Es_Iniano = '';
+        $mtclient->SENCE = '';
+        $mtclient->DATOS_P = 'N';
+        $mtclient->FECINIPAS = '';
+        $mtclient->FECFINPAS = '';
+        $mtclient->Mail_Inst = 'manuel.merino.caceres@ciisa.cl';
+        $mtclient->Visible_Egresado = '';
+        $mtclient->Recibe_informativos = '';
+        $mtclient->AREAPROC = '';
+        $mtclient->AREAACT = '';
+        $mtclient->CAE = '';
+        $mtclient->CELULAR = '';
+        $mtclient->BecaNuevoMilenio = '';
+        $mtclient->BecaExcelencia = '';
+        $mtclient->OTRABECA = '0';
+        $mtclient->GLOSACAE = '';
+        $mtclient->FECHA_TRASPASO = '';
+        $mtclient->Clave_Mail_Inst = '';
+        $mtclient->N_PERS_HOGAR = '';
+        $mtclient->ING_BRUTO_FAMILIAR = '';
+        $mtclient->FECHA_DEFUNCION = '';
+        $mtclient->al_cargo = '';
+        $mtclient->TRASPASOCONTA = '';
+        $mtclient->TipoDocumento = '';
+        $mtclient->CodModalidad = 'TÉCNICO-PROFESIONAL';
+        $mtclient->CodEspecialidad = '';
+        $mtclient->CODRELACION = '';
+        $mtclient->CODTIPORELACION = '';
+        $mtclient->OBSERVACION = '';
+        $mtclient->FECRELACION = '';
+        $mtclient->TipoResidencia = '';
+        $mtclient->pref_correo = '';
+        $mtclient->pref_direccion = '';
+        $mtclient->pref_telefono = '';
+        $mtclient->save();
     }
+
 }
