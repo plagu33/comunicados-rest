@@ -85,7 +85,7 @@ class CreateMTALUMNOTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('MT_ALUMNO');
+        Schema::connection('umas')->dropIfExists('MT_ALUMNO');
     }
 
 }

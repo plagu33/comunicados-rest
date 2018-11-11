@@ -9,6 +9,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(MTCLIENTSeeder::class);
         $this->call(MTALUMNOSeeder::class);
+        $this->call(RANOTASeeder::class);
     }
 
 }
