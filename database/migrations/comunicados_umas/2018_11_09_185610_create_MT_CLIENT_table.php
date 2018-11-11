@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDemoTable extends Migration
+class CreateMTCLIENTTable extends Migration
 {
 
     public function up()
@@ -78,69 +78,69 @@ class CreateDemoTable extends Migration
             $table->string('VIACONSULTA',10)->nullable();
             $table->string('DESBL_TOMARAMOS',1)->nullable();
             $table->string('CATEGORIA',10)->nullable();
-            $table->decimal('CODEMPRESA',10,0)->nullable();
-            $table->string('CODTRAMO')->nullable();
-            $table->string('CODMOTIVO')->nullable();
-            $table->string('REGLICEM')->nullable();
-            $table->string('NUMINSCRIPCION')->nullable();
-            $table->string('FECHAINSCRIP')->nullable();
-            $table->string('CIRCUNSCRIPCION')->nullable();
-            $table->string('ANOINSCRIP')->nullable();
-            $table->string('DEUDA')->nullable();
-            $table->string('NROHIJOS')->nullable();
-            $table->string('ATRABAJADO')->nullable();
-            $table->string('CELULARACT')->nullable();
-            $table->string('ES_PROMEDIONOTAS')->nullable();
-            $table->string('ES_UNIVERSIDADEXT')->nullable();
-            $table->string('TIPOMERITO')->nullable();
-            $table->string('LUGARCURSO')->nullable();
-            $table->string('DESCMERITO')->nullable();
-            $table->string('TIPODEPORTE')->nullable();
-            $table->string('DESCDEPORTE')->nullable();
-            $table->string('CARRERAORIGEN')->nullable();
-            $table->string('CARRERADESTINO')->nullable();
-            $table->string('INSTITUCION')->nullable();
-            $table->string('PAIS')->nullable();
-            $table->string('Es_Iniano')->nullable();
-            $table->string('SENCE')->nullable();
-            $table->string('DATOS_P')->nullable();
-            $table->string('FECINIPAS')->nullable();
-            $table->string('FECFINPAS')->nullable();
-            $table->string('Mail_Inst')->nullable();
-            $table->string('Visible_Egresado')->nullable();
-            $table->string('Recibe_informativos')->nullable();
-            $table->string('AREAPROC')->nullable();
-            $table->string('AREAACT')->nullable();
-            $table->string('CAE')->nullable();
-            $table->string('CELULAR')->nullable();
-            $table->string('BecaNuevoMilenio')->nullable();
-            $table->string('BecaExcelencia')->nullable();
-            $table->string('OTRABECA')->nullable();
-            $table->string('GLOSACAE')->nullable();
-            $table->string('FECHA_TRASPASO')->nullable();
-            $table->string('Clave_Mail_Inst')->nullable();
-            $table->string('N_PERS_HOGAR')->nullable();
-            $table->string('ING_BRUTO_FAMILIAR')->nullable();
-            $table->string('FECHA_DEFUNCION')->nullable();
-            $table->string('al_cargo')->nullable();
-            $table->string('TRASPASOCONTA')->nullable();
-            $table->string('TipoDocumento')->nullable();
-            $table->string('CodModalidad')->nullable();
-            $table->string('CodEspecialidad')->nullable();
-            $table->string('CODRELACION')->nullable();
-            $table->string('CODTIPORELACION')->nullable();
-            $table->string('OBSERVACION')->nullable();
-            $table->string('FECRELACION')->nullable();
-            $table->string('TipoResidencia')->nullable();
-            $table->string('pref_correo')->nullable();
-            $table->string('pref_direccion')->nullable();
-            $table->string('pref_telefono')->nullable();
+            $table->integer('CODEMPRESA')->nullable();
+            $table->decimal('CODTRAMO',5,0)->nullable();
+            $table->decimal('CODMOTIVO',5,0)->nullable();
+            $table->string('REGLICEM',20)->nullable();
+            $table->string('NUMINSCRIPCION',20)->nullable();
+            $table->dateTime('FECHAINSCRIP')->nullable();
+            $table->string('CIRCUNSCRIPCION',20)->nullable();
+            $table->integer('ANOINSCRIP')->nullable();
+            $table->integer('DEUDA')->nullable();
+            $table->integer('NROHIJOS')->nullable();
+            $table->integer('ATRABAJADO')->nullable();
+            $table->string('CELULARACT',30)->nullable();
+            $table->decimal('ES_PROMEDIONOTAS',6,2)->nullable();
+            $table->string('ES_UNIVERSIDADEXT',50)->nullable();
+            $table->integer('TIPOMERITO')->nullable();
+            $table->integer('LUGARCURSO')->nullable();
+            $table->string('DESCMERITO',50)->nullable();
+            $table->string('TIPODEPORTE',50)->nullable();
+            $table->string('DESCDEPORTE',50)->nullable();
+            $table->string('CARRERAORIGEN',10)->nullable();
+            $table->string('CARRERADESTINO',10)->nullable();
+            $table->string('INSTITUCION',10)->nullable();
+            $table->decimal('PAIS',4,0)->nullable();
+            $table->decimal('Es_Iniano',4,0)->nullable();
+            $table->integer('SENCE')->nullable();
+            $table->string('DATOS_P',1)->nullable();
+            $table->dateTime('FECINIPAS')->nullable();
+            $table->dateTime('FECFINPAS')->nullable();
+            $table->string('Mail_Inst',100)->nullable();
+            $table->string('Visible_Egresado',2)->nullable();
+            $table->string('Recibe_informativos',1)->nullable();
+            $table->integer('AREAPROC')->nullable();
+            $table->integer('AREAACT')->nullable();
+            $table->integer('CAE')->nullable();
+            $table->string('CELULAR',10)->nullable();
+            $table->integer('BecaNuevoMilenio')->nullable();
+            $table->integer('BecaExcelencia')->nullable();
+            $table->string('OTRABECA',30)->nullable();
+            $table->string('GLOSACAE',30)->nullable();
+            $table->dateTime('FECHA_TRASPASO')->nullable();
+            $table->string('Clave_Mail_Inst',100)->nullable();
+            $table->integer('N_PERS_HOGAR')->nullable();
+            $table->decimal('ING_BRUTO_FAMILIAR',10,0)->nullable();
+            $table->dateTime('FECHA_DEFUNCION')->nullable();
+            $table->string('al_cargo',50)->nullable();
+            $table->string('TRASPASOCONTA',2)->nullable();
+            $table->smallInteger('TipoDocumento')->nullable();
+            $table->string('CodModalidad',30)->nullable();
+            $table->integer('CodEspecialidad')->nullable();
+            $table->string('CODRELACION',30)->nullable();
+            $table->string('CODTIPORELACION',30)->nullable();
+            $table->string('OBSERVACION',200)->nullable();
+            $table->dateTime('FECRELACION')->nullable();
+            $table->smallInteger('TipoResidencia')->nullable();
+            $table->string('pref_correo',20)->nullable();
+            $table->string('pref_direccion',20)->nullable();
+            $table->string('pref_telefono',20)->nullable();
         });
     }
 
     public function down()
     {
-        Schema::connection('umas')->dropIfExists('demo');
+        Schema::connection('umas')->dropIfExists('MT_CLIENT');
     }
 
 }
