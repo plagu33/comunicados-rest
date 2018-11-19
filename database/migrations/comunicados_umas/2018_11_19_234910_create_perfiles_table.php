@@ -16,6 +16,7 @@ class CreatePerfilesTable extends Migration
         Schema::connection('umas')->create('perfiles', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            
         });
     }
 
