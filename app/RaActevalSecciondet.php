@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MTALUMNO extends Model
+class RaActEvalSecciondet extends Model
 {
     protected $connection = 'umas';
-    protected $table = 'MT_ALUMNO';
+    protected $table = 'ra_ActEval_Seccion_det';
     public $timestamps = false;
 }

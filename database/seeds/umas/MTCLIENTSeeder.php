@@ -8,7 +8,7 @@ class MTCLIENTSeeder extends Seeder
     public function run()
     {
 
-        $mtclient = new \App\MTCLIENT();
+        $mtclient = new \App\MtClient();
         $mtclient->CODCLI = '16340395';
         $mtclient->DIG = '1';
         $mtclient->PATERNO = 'MERIÑO';

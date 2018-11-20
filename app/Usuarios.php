@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MTCLIENT extends Model
+class Usuarios extends Model
 {
     protected $connection = 'umas';
-    protected $table = 'MT_CLIENT';
+    protected $table = 'usuarios';
     public $timestamps = false;
 }

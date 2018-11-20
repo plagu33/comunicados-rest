@@ -7,7 +7,7 @@ class MTALUMNOSeeder extends Seeder
 
     public function run()
     {
-        $mtalumno = new \App\MTALUMNO();
+        $mtalumno = new \App\MtAlumno();
         $mtalumno->CODCLI = "20161NICIRE002";
         $mtalumno->CODCARPR = "NICIRE";
         $mtalumno->CODCARPT = "";

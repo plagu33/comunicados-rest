@@ -8,7 +8,7 @@ class RANOTASeeder extends Seeder
     public function run()
     {
 
-        $ranota = new \App\RANOTA();
+        $ranota = new \App\RaNota();
         $ranota->CODSECC = "6";
         $ranota->CODRAMO = "CA401NICIRE";
         $ranota->CODCLI = "20161NICIRE002";
@@ -85,7 +85,7 @@ class RANOTASeeder extends Seeder
         $ranota->PPM = "";
         $ranota->save();
 
-        $ranota = new \App\RANOTA();
+        $ranota = new \App\RaNota();
         $ranota->CODSECC = "6";
         $ranota->CODRAMO = "CA402NICIRE";
         $ranota->CODCLI = "20161NICIRE002";
@@ -162,7 +162,7 @@ class RANOTASeeder extends Seeder
         $ranota->PPM = "";
         $ranota->save();
 
-        $ranota = new \App\RANOTA();
+        $ranota = new \App\RaNota();
         $ranota->CODSECC = "6";
         $ranota->CODRAMO = "CI401NICIRE";
         $ranota->CODCLI = "20161NICIRE002";
@@ -239,7 +239,7 @@ class RANOTASeeder extends Seeder
         $ranota->PPM = "";
         $ranota->save();
 
-        $ranota = new \App\RANOTA();
+        $ranota = new \App\RaNota();
         $ranota->CODSECC = "6";
         $ranota->CODRAMO = "EH405NICIRE";
         $ranota->CODCLI = "20161NICIRE002";
@@ -316,7 +316,7 @@ class RANOTASeeder extends Seeder
         $ranota->PPM = "";
         $ranota->save();
 
-        $ranota = new \App\RANOTA();
+        $ranota = new \App\RaNota();
         $ranota->CODSECC = "6";
         $ranota->CODRAMO = "TP401NICIRE";
         $ranota->CODCLI = "20161NICIRE002";
