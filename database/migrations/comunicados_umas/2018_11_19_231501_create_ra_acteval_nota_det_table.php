@@ -23,7 +23,7 @@ class CreateRaActevalNotaDetTable extends Migration
             $table->string('CodCLi',30)->nullable();
             $table->string('actividad',30)->nullable();
             $table->smallInteger('Linea')->nullable();
-            $table->decimal('Nota'2,2)->nullable();
+            $table->decimal('Nota',2,2)->nullable();
         });
     }
 
