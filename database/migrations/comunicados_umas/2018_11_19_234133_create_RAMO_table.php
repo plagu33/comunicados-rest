@@ -14,8 +14,8 @@ class CreateRAMOTable extends Migration
     public function up()
     {
         Schema::connection('umas')->create('RAMO', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('CODRAMO',20)->nullable();
+            $table->string('NOMBRE',100)->nullable();
         });
     }
 
