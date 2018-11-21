@@ -14,8 +14,8 @@ class CreateCARRERATable extends Migration
     public function up()
     {
         Schema::connection('umas')->create('CARRERA', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->string('CODCARR',30)->nullable();
+            $table->string('NOMBRE_C',300)->nullable();
         });
     }
 
