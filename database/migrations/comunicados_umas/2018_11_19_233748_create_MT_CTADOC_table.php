@@ -96,7 +96,6 @@ class CreateMTCTADOCTable extends Migration
             $table->decimal('MONTO_AD',12,4)->nullable();
             $table->decimal('SALDO_AD',12,4)->nullable();       
         });
-        });
     }
 
     /**

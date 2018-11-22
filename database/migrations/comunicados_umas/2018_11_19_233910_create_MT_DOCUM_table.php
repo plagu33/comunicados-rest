@@ -36,6 +36,7 @@ class CreateMTDOCUMTable extends Migration
             $table->string('VENTACOMPLEMENTARIA',2)->nullable();
             $table->char('GENERAINT',2)->nullable();
             $table->decimal('MONEDA_AD',1,0)->nullable();
+        });
     }
 
     /**
