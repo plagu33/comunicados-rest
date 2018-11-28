@@ -18,14 +18,14 @@ class MTALUMNOSeeder extends Seeder
         $mtalumno->CODACAD = "";
         $mtalumno->PERIODO = "1";
         $mtalumno->PONDERADO = "";
-        $mtalumno->FECREG = "12/12/2017 0:00:00";
+        $mtalumno->FECREG = "2017-12-12 0:00:00";
         $mtalumno->CODPESTUD = "NICIRE20151";
         $mtalumno->ESTFINANOBS = "";
         $mtalumno->CLAVE = "";
         $mtalumno->PUNTAJE = "";
         $mtalumno->ANOPESTUD = "2018";
         $mtalumno->USUARIO = "3551";
-        $mtalumno->FECMOD = "12/12/2017 10:13:00";
+        $mtalumno->FECMOD = "2017-12-12 10:13:00";
         $mtalumno->RUT = "16340395";
         $mtalumno->JORNADA = "V";
         $mtalumno->NIVEL = "1";
@@ -34,7 +34,7 @@ class MTALUMNOSeeder extends Seeder
         $mtalumno->PERIODOTIT = "";
         $mtalumno->ANOTIT = "";
         $mtalumno->ESUDD = "";
-        $mtalumno->FEC_MAT = "12/12/2017 0:00:00";
+        $mtalumno->FEC_MAT = "2017-12-12 0:00:00";
         $mtalumno->ANO_MAT = "2018";
         $mtalumno->PERIODO_MAT = "2";
         $mtalumno->MATRICULADO = "S";

@@ -19,7 +19,7 @@ class MTCLIENTSeeder extends Seeder
         $mtclient->DOBLENACION = '';
         $mtclient->TIPOVISA = 'ESTUDIO';
         $mtclient->PASAPORTE = '';
-        $mtclient->FECNAC = '17/06/1986 0:00:00';
+        $mtclient->FECNAC = '1986-06-17 00:00:00';
         $mtclient->CODESTCIVIL = 'SOLTERO';
         $mtclient->CODSISSALUD = '37';
         $mtclient->DIRPROC = 'PADRE MIGUEL DE OLIVAR 1444 DEPTO 1609 PISO 16';
@@ -55,7 +55,7 @@ class MTCLIENTSeeder extends Seeder
         $mtclient->EMERGENCIA = 'XIMENA CÁCERES (MAMÁ)';
         $mtclient->FONOEMERG = '7115542';
         $mtclient->USUARIO = '7680';
-        $mtclient->FECMOD = '12/02/2016 0:00:00';
+        $mtclient->FECMOD = '2016-12-06 0:00:00';
         $mtclient->RUTCLI = '';
         $mtclient->DOLENCIA = '';
         $mtclient->MAIL = 'manuel.merino.c@gmail.com';

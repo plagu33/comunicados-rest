@@ -14,7 +14,6 @@ class DatabaseSeeder extends Seeder
         $this->call(MT_CTADOCSeeder::class);
         $this->call(MT_DOCUMSeeder::class);
         $this->call(PerfilesSeeder::class);
-        $this->call(PerfilesSeeder::class);
         $this->call(RA_RESERVASALASeeder::class);
         $this->call(RaActevalNotaDetSeeder::class);
         $this->call(RaActevalSeccionDetSeeder::class);

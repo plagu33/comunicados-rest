@@ -57,7 +57,7 @@ class RANOTASeeder extends Seeder
         $ranota->NCERT3 = "";
         $ranota->NCERT4 = "5,2";
         $ranota->NCERT5 = "6";
-        $ranota->FECMOD = "8/03/2018 15:14:56";
+        $ranota->FECMOD = "2018-02-08 15:14:56";
         $ranota->CONCEPTO = "";
         $ranota->VALORE = "";
         $ranota->VALORD1 = "";
@@ -134,7 +134,7 @@ class RANOTASeeder extends Seeder
         $ranota->NCERT3 = "";
         $ranota->NCERT4 = "4,2";
         $ranota->NCERT5 = "5,3";
-        $ranota->FECMOD = "8/03/2018 15:15:04";
+        $ranota->FECMOD = "2018-03-08 15:15:04";
         $ranota->CONCEPTO = "";
         $ranota->VALORE = "";
         $ranota->VALORD1 = "";
@@ -211,7 +211,7 @@ class RANOTASeeder extends Seeder
         $ranota->NCERT3 = "";
         $ranota->NCERT4 = "3,5";
         $ranota->NCERT5 = "4";
-        $ranota->FECMOD = "8/03/2018 15:15:11";
+        $ranota->FECMOD = "2018-03-08 15:15:11";
         $ranota->CONCEPTO = "";
         $ranota->VALORE = "";
         $ranota->VALORD1 = "";
@@ -288,7 +288,7 @@ class RANOTASeeder extends Seeder
         $ranota->NCERT3 = "";
         $ranota->NCERT4 = "6";
         $ranota->NCERT5 = "5,6";
-        $ranota->FECMOD = "8/03/2018 15:15:21";
+        $ranota->FECMOD = "2018-03-08 15:15:21";
         $ranota->CONCEPTO = "";
         $ranota->VALORE = "";
         $ranota->VALORD1 = "";
@@ -365,7 +365,7 @@ class RANOTASeeder extends Seeder
         $ranota->NCERT3 = "";
         $ranota->NCERT4 = "4";
         $ranota->NCERT5 = "5";
-        $ranota->FECMOD = "8/03/2018 15:15:31";
+        $ranota->FECMOD = "2018-03-08 15:15:31";
         $ranota->CONCEPTO = "";
         $ranota->VALORE = "";
         $ranota->VALORD1 = "";
