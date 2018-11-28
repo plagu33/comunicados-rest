@@ -11,6 +11,15 @@ class PerfilesSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $perfiles = new \App\Perfiles();
+        $perfiles->id_perfil = "65";
+        $perfiles->pe_perfil = "Portal Docente";
+        $perfiles->save();
+
+        $perfiles = new \App\Perfiles();
+        $perfiles->id_perfil = "190";
+        $perfiles->pe_perfil = "SECRETARIA ACADEMICA";
+        $perfiles->save();
+
     }
 }
