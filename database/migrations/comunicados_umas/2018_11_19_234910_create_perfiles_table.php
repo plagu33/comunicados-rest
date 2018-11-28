@@ -14,9 +14,8 @@ class CreatePerfilesTable extends Migration
     public function up()
     {
         Schema::connection('umas')->create('perfiles', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-
+            $table->integer('id_perfil')->nullable();
+            $table->string('pe_perfil',50)->nullable();
         });
     }
 

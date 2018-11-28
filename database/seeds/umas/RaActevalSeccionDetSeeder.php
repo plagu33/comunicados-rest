@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class RaActEvalSeccion extends Seeder
+class RaActevalSeccionDetSeeder extends Seeder
 {
     /**
      * Run the database seeds.

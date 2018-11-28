@@ -14,8 +14,12 @@ class CreatePersonaTable extends Migration
     public function up()
     {
         Schema::connection('umas')->create('persona', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->integer('id_persona')->nullable();
+            $table->string('pe_nombrecompleto',500)->nullable();
+            $table->string('pe_nombres',70)->nullable();
+            $table->string('pe_appaterno',25)->nullable();
+            $table->string('pe_apmaterno',20)->nullable();
+            $table->string('pe_rut',30)->nullable();
         });
     }
 

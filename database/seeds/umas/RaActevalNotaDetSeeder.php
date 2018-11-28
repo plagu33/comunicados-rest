@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class UsuarioPerfiles extends Seeder
+class RaActevalNotaDetSeeder extends Seeder
 {
     /**
      * Run the database seeds.

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class MT_DOCUM extends Seeder
+class CARRERASeeder extends Seeder
 {
     /**
      * Run the database seeds.

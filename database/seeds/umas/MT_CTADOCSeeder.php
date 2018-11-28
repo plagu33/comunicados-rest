@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class Perfiles extends Seeder
+class MT_CTADOCSeeder extends Seeder
 {
     /**
      * Run the database seeds.

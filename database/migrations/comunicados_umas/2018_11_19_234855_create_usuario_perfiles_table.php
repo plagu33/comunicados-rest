@@ -14,8 +14,9 @@ class CreateUsuarioPerfilesTable extends Migration
     public function up()
     {
         Schema::connection('umas')->create('usuario_perfiles', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+            $table->integer('id_usuarioperfil')->nullable();
+            $table->integer('id_usuario')->nullable();
+            $table->integer('id_perfil')->nullable();
         });
     }
 
