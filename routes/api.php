@@ -30,7 +30,10 @@ Route::delete('task/{id}','TaskController@destroy');
 */
 
 // get list of tasks
-Route::get('demos','DemoController@index');
+//Route::get('demos','DemoController@index');
 
 // create new demo
-Route::post('demo','DemoController@store');
+//Route::post('demo','DemoController@store');
+
+Route::get('login','LoginController@index'); //no tiene sentido, solo de prueba
+Route::post('login','LoginController@login');

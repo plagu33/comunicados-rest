@@ -4,12 +4,12 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class Demo extends JsonResource
+class User extends JsonResource
 {
     public function toArray($request)
     {
         return [
-            'name' => $this->name,
+            'id_persona' => $this->id_persona,
         ];
     }
 }
