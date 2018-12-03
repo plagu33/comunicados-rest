@@ -37,3 +37,5 @@ Route::delete('task/{id}','TaskController@destroy');
 
 Route::get('login','LoginController@index'); //no tiene sentido, solo de prueba
 Route::post('login','LoginController@login');
+
+Route::get('jobusers','JobsController@GenerateUsers');
