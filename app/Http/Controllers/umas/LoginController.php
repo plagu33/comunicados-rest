@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Persona;
 use App\Usuarios;
 use Illuminate\Http\Request;
-use App\Http\Resources\User as UserResource;
+//use App\Http\Resources\User as UserResource;
 
 class LoginController extends Controller
 {
@@ -23,15 +23,29 @@ class LoginController extends Controller
         if ($request->isMethod('post')) {
 
             $usuario = Usuarios::where('us_consuser',$rut)->where('us_password',$password)->first();
-            $id_persona = $usuario["id_persona"];
-            $persona = Persona::where("id_persona","=",$id_persona)->first();
 
-        }else{
-            abort(500);
+            if ($usuario["id_persona"]) {
+
+                $id_persona = $usuario["id_persona"];
+                $persona = Persona::where("id_persona","=",$id_persona)->first();
+
+                if ($persona) {
+                    return response()->json($persona,200);
+                }else{
+                    return response()->json(["status"=>"not found"],200);
+                }
+
+            }else{
+
+                return response()->json(["status"=>"not found"],200);
+
+            }
+
         }
 
         //return UserResource::collection($persona);
-        return new UserResource($persona);
+        //return new UserResource($persona);
+        //return response()->json("",403);
 
     }
     /**
