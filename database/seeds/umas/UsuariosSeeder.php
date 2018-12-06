@@ -45,5 +45,13 @@ class UsuariosSeeder extends Seeder
         $usuario->us_consuser = "145648879";
         $usuario->us_password = "111111";
         $usuario->save();
+
+        $usuario = new \App\Usuarios();
+        $usuario->id_usuario = "3551";
+        $usuario->id_persona = "1111";
+        $usuario->us_consuser = "163403951";
+        $usuario->us_password = "111111";
+        $usuario->save();
+
     }
 }

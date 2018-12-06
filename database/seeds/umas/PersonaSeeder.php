@@ -56,5 +56,14 @@ class PersonaSeeder extends Seeder
         $persona->pe_rut = "84621355";
         $persona->save();
 
+        $persona = new \App\Persona();
+        $persona->id_persona = "1111";
+        $persona->pe_nombrecompleto = "Manuel Arturo Meriño Cáceres	";
+        $persona->pe_nombres = "Manuel";
+        $persona->pe_appaterno = "Meriño";
+        $persona->pe_apmaterno = "Cáceres";
+        $persona->pe_rut = "163403951";
+        $persona->save();
+
     }
 }
