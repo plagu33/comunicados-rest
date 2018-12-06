@@ -30,7 +30,7 @@ class LoginController extends Controller
             abort(500);
         }
 
-        //return UserResource::collection($usuario);
+        //return UserResource::collection($persona);
         return new UserResource($persona);
 
     }
