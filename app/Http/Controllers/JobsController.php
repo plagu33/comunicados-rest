@@ -13,6 +13,8 @@ class JobsController extends Controller
 
         $personas = $p::with('user');
 
+        Usuario::truncate();
+
         foreach ($personas->get() as $persona) {
 
             $perfil = UsuarioPerfiles::where('id_usuario',$persona->user->id_usuario)->first();
@@ -29,6 +31,8 @@ class JobsController extends Controller
             $usuario->save();
 
         }
+
+        echo now();
 
     }
 
