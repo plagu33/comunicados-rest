@@ -26,9 +26,6 @@ Route::post('task','TaskController@store');
 Route::put('task','TaskController@store');
 // delete a task
 Route::delete('task/{id}','TaskController@destroy');
-
-*/
-
 // get list of tasks
 //Route::get('demos','DemoController@index');
 
@@ -36,6 +33,9 @@ Route::delete('task/{id}','TaskController@destroy');
 //Route::post('demo','DemoController@store');
 
 //Route::get('login','LoginController@index'); //no tiene sentido, solo de prueba
+
+*/
+
 Route::post('login','LoginController@login');
 
 Route::get('jobusers','JobsController@GenerateUsers');

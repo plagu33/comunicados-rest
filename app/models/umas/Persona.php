@@ -16,9 +16,4 @@ class Persona extends Model
         return $this->hasOne('App\Usuarios','id_persona','id_persona');
     }
 
-    public function perfil()
-    {
-        return $this->hasOne('App\UsuarioPerfiles','id_usuario','id_usuario');
-    }
-
 }

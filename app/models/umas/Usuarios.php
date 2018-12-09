@@ -11,11 +11,4 @@ class Usuarios extends Model
     protected $table = 'usuarios';
     public $timestamps = false;
 
-/*    public function roles()
-    {
-        return $this
-            ->belongsToMany('App\UsuariosPerfiles','App\Perfiles','id_usuario','id_usuario');
-    }
-*/
-
 }
