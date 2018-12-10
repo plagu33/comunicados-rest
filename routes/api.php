@@ -37,5 +37,7 @@ Route::delete('task/{id}','TaskController@destroy');
 */
 
 Route::post('login','LoginController@login');
+Route::get('finanzas/{id}','FinanzaController@ObtenerFinanzas');
 
 Route::get('jobusers','JobsController@GenerateUsers');
+Route::get('jobfinanzas','JobsController@GenerateFinanzas');

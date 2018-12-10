@@ -2,10 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Persona;
 use App\Usuario;
 use Illuminate\Http\Request;
-//use App\Http\Resources\User as UserResource;
 
 class LoginController extends Controller
 {

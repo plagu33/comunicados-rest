@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e41aff9-91be-4cf5-849e-acbda332f6a9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/comunicados-rest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/comunicados-rest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/JobsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/JobsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/umas/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/umas/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_11_223603_create_RA_NOTA_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_11_223603_create_RA_NOTA_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_233748_create_MT_CTADOC_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_233748_create_MT_CTADOC_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_233910_create_MT_DOCUM_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_233910_create_MT_DOCUM_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/umas/RAMOSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/umas/RAMOSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/umas/RANOTASeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/umas/RANOTASeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/umas/RaActevalNotaDetSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/umas/RaActevalNotaDetSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/umas/RaActevalSeccionDetSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/umas/RaActevalSeccionDetSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +24,51 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="comunicados@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="comunicados@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="comunicados@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="comunicados: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="comunicados_umas@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="comunicados_umas@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="comunicados_umas@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="comunicados_umas: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-802102570">
@@ -61,65 +116,74 @@
     <session id="-1247064603">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="env" value="3" />
-          <entry key="example" value="1" />
+          <entry key="carrera" value="3" />
+          <entry key="env" value="10" />
+          <entry key="example" value="4" />
           <entry key="gitignore" value="1" />
-          <entry key="php" value="206" />
+          <entry key="lock" value="1" />
+          <entry key="mt_alumno" value="3" />
+          <entry key="mt_client" value="1" />
+          <entry key="mt_ctadoc" value="1" />
+          <entry key="mt_docum" value="1" />
+          <entry key="php" value="552" />
+          <entry key="ra_acteval_nota_det" value="1" />
+          <entry key="ra_nota" value="1" />
+          <entry key="ra_reservasala" value="1" />
+          <entry key="ramo" value="2" />
+          <entry key="sql" value="4" />
+          <entry key="usuario" value="1" />
+          <entry key="usuarios" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key=".env file" value="4" />
-          <entry key="PHP" value="206" />
+          <entry key=".env file" value="14" />
+          <entry key="Blade" value="3" />
+          <entry key="Database Element" value="16" />
+          <entry key="JSON" value="1" />
+          <entry key="PHP" value="549" />
           <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Scratch" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="62" />
-          <entry key="env" value="12" />
-          <entry key="php" value="1755" />
+          <entry key="dummy" value="87" />
+          <entry key="env" value="29" />
+          <entry key="php" value="8539" />
+          <entry key="txt" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key=".env file" value="12" />
-          <entry key="PHP" value="1755" />
-          <entry key="PLAIN_TEXT" value="62" />
+          <entry key=".env file" value="29" />
+          <entry key="Blade" value="44" />
+          <entry key="PHP" value="8495" />
+          <entry key="PLAIN_TEXT" value="114" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.closed" value="15" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="2" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="4" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="comunicados-rest" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_233748_create_MT_CTADOC_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1425">
-              <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_233910_create_MT_DOCUM_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -128,6 +192,28 @@
       <find>ppm</find>
       <find>integer</find>
       <find>TIPOMERITO</find>
+      <find>FECCANCEL</find>
+      <find>CI301NICIRE</find>
+      <find>PerfilesSeeder</find>
+      <find>ra_ActEval_Seccion_det</find>
+      <find>UsuarioPerfiles</find>
+      <find>perfiles</find>
+      <find>$perfil-&gt;id_perfil</find>
+      <find>$id_persona</find>
+      <find>CI307NICIRE</find>
+      <find>CI401</find>
+      <find>GESTION DE PROCESOS DE NEGOCIOS Y ARQUITECTURA DE SERVICIOS</find>
+      <find>TP405NICIRE</find>
+      <find>TP401NICIRE</find>
+      <find>EH405NICIRE</find>
+      <find>CI401NICIRE</find>
+      <find>CA402NICIRE</find>
+      <find>CA401NICIRE</find>
+      <find>TP305NICIRE</find>
+      <find>EH304NICIRE</find>
+      <find>CODSEDE</find>
+      <find>3551</find>
+      <find>date</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,57 +222,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/database.php" />
-        <option value="$PROJECT_DIR$/.env.example" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_11_09_185610_create_demo_table.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/database/migrations/2018_11_09_185610_create_MT_CLIENT_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_09_185610_create_MT_CLIENT_table.php" />
-        <option value="$PROJECT_DIR$/app/MTCLIENT.php" />
-        <option value="$PROJECT_DIR$/database/seeds/MTCLIENTSeeder.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_11_213906_create_MT_CLIENT_table.php" />
-        <option value="$PROJECT_DIR$/database/seeds/MTALUMNOSeeder.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_11_213906_create_MT_ALUMNO_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_11_223603_create__RANOTA_table.php" />
-        <option value="$PROJECT_DIR$/database/seeds/umas/RANOTASeeder.php" />
-        <option value="$PROJECT_DIR$/app/MTALUMNO.php" />
-        <option value="$PROJECT_DIR$/app/RANOTA.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_11_223603_create_RA_NOTA_table.php" />
-        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_230842_create_ra_acteval_seccion_det_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_225908_create_ra_act_eval_seccion_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_231501_create_ra__acteval__nota_det_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_232316_create_RA_RESERVASALA_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234023_create_CARRERA_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234133_create_RAMO_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234713_create_persona_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234840_create_usuarios_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234855_create_usuario_perfiles_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234910_create_perfiles_table.php" />
-        <option value="$PROJECT_DIR$/app/Ra_Acteval_Nota_det.php" />
-        <option value="$PROJECT_DIR$/app/Ra_ActEval_Seccion.php" />
-        <option value="$PROJECT_DIR$/app/Ra_Acteval_Seccion_det.php" />
-        <option value="$PROJECT_DIR$/app/RA_RESERVASALA.php" />
-        <option value="$PROJECT_DIR$/app/MT_DOCUM.php" />
-        <option value="$PROJECT_DIR$/app/MT_CTADOC.php" />
-        <option value="$PROJECT_DIR$/app/RaActevalNotadet.php" />
-        <option value="$PROJECT_DIR$/app/RaActevalSecciondet.php" />
-        <option value="$PROJECT_DIR$/app/RaActEvalSeccion.php" />
-        <option value="$PROJECT_DIR$/app/CARRERA.php" />
-        <option value="$PROJECT_DIR$/app/RAMO.php" />
-        <option value="$PROJECT_DIR$/app/persona.php" />
-        <option value="$PROJECT_DIR$/app/Usuarios.php" />
-        <option value="$PROJECT_DIR$/app/UsuarioPerfiles.php" />
-        <option value="$PROJECT_DIR$/app/Perfiles.php" />
-        <option value="$PROJECT_DIR$/app/Carrera.php" />
-        <option value="$PROJECT_DIR$/app/MtAlumno.php" />
-        <option value="$PROJECT_DIR$/app/MtCtaDoc.php" />
-        <option value="$PROJECT_DIR$/app/Ramo.php" />
-        <option value="$PROJECT_DIR$/app/RaNota.php" />
-        <option value="$PROJECT_DIR$/app/RaReservaSala.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/Perfiles.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/Persona.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/RA_RESERVASALA.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/RaActevalNotaDet.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/RaActEvalSeccion.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/RAMO.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/UsuarioPerfiles.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/Usuarios.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/RaActevalSeccionDet.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/CARRERASeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/MT_CTADOCSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/MT_DOCUMSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/PerfilesSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/RA_RESERVASALASeeder.php" />
         <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_231501_create_ra_acteval_nota_det_table.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/RaActEvalSeccionSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/UsuarioPerfilesSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/CarreraSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/MTALUMNOSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/MTCLIENTSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/Demo.php" />
+        <option value="$PROJECT_DIR$/app/models/umas/RaActevalSecciondet.php" />
+        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_230842_create_ra_acteval_seccion_det_table.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Resources/User.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2018_12_08_203737_create_usuario_table.php" />
+        <option value="$PROJECT_DIR$/app/models/umas/Persona.php" />
+        <option value="$PROJECT_DIR$/database/migrations/comunicados/2018_12_08_203737_create_usuario_table.php" />
+        <option value="$PROJECT_DIR$/app/models/umas/Usuarios.php" />
+        <option value="$PROJECT_DIR$/app/models/umas/Perfiles.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/models/Usuario.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/RAMOSeeder.php" />
+        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_11_223603_create_RA_NOTA_table.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/RANOTASeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/RaActevalNotaDetSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/RaActevalSeccionDetSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/UsuariosSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/umas/PersonaSeeder.php" />
+        <option value="$PROJECT_DIR$/database/migrations/comunicados/2018_12_09_203737_create_finanzas_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_233748_create_MT_CTADOC_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_233910_create_MT_DOCUM_table.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/models/Finanza.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/JobsController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/comunicados/2018_12_09_203737_create_finanza_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/umas/LoginController.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/umas/FinanzaController.php" />
       </list>
     </option>
   </component>
@@ -281,6 +367,8 @@
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -303,44 +391,58 @@
             <path>
               <item name="comunicados-rest" type="b2602c69:ProjectViewProjectNode" />
               <item name="comunicados-rest" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comunicados-rest" type="b2602c69:ProjectViewProjectNode" />
               <item name="comunicados-rest" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comunicados-rest" type="b2602c69:ProjectViewProjectNode" />
               <item name="comunicados-rest" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-              <item name="comunicados_umas" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comunicados-rest" type="b2602c69:ProjectViewProjectNode" />
               <item name="comunicados-rest" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="seeds" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comunicados-rest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comunicados-rest" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-              <item name="seeds" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
               <item name="umas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comunicados-rest" type="b2602c69:ProjectViewProjectNode" />
               <item name="comunicados-rest" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comunicados-rest" type="b2602c69:ProjectViewProjectNode" />
               <item name="comunicados-rest" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comunicados-rest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comunicados-rest" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comunicados-rest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comunicados-rest" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+              <item name="comunicados" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comunicados-rest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comunicados-rest" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="seeds" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comunicados-rest" type="b2602c69:ProjectViewProjectNode" />
@@ -355,22 +457,29 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SearchEverywhereHistoryKey" value="api&#9;FILE&#9;file:///Volumes/Respaldo/dev/htdocs/comunicados-rest/routes/api.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/database/seeds/umas" />
-      <recent name="$PROJECT_DIR$/database/migrations/comunicados_umas" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/umas" />
+      <recent name="$PROJECT_DIR$/app/models" />
+      <recent name="$PROJECT_DIR$/database/migrations/comunicados" />
+      <recent name="$PROJECT_DIR$/app/Http/Resources" />
       <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/database/seeds/umas" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/database/factories" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/database/migrations/comunicados" />
+      <recent name="$PROJECT_DIR$/app/models" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/umas" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/app/models/umas" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -401,60 +510,59 @@
       <workItem from="1542576817696" duration="946000" />
       <workItem from="1542667781431" duration="4940000" />
       <workItem from="1542755550594" duration="793000" />
-      <workItem from="1542928217680" duration="292000" />
+      <workItem from="1542928217680" duration="415000" />
+      <workItem from="1543369625909" duration="8946000" />
+      <workItem from="1543450186699" duration="6261000" />
+      <workItem from="1543621394374" duration="2123000" />
+      <workItem from="1543718493860" duration="4916000" />
+      <workItem from="1543898611820" duration="216000" />
+      <workItem from="1544058100668" duration="3924000" />
+      <workItem from="1544128511117" duration="2200000" />
+      <workItem from="1544307294479" duration="14950000" />
+      <workItem from="1544374508521" duration="1251000" />
+      <workItem from="1544394039876" duration="3610000" />
+      <workItem from="1544404544556" duration="2922000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27176000" />
+    <option name="totallyTimeSpent" value="78618000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32956383" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984227" visible="true" weight="0.26898223" />
+      <window_info id="Structure" order="1" sideWeight="0.50157726" side_tool="true" weight="0.26494345" />
+      <window_info id="npm" order="2" sideWeight="0.50157726" side_tool="true" weight="0.26494345" />
+      <window_info id="Favorites" order="3" sideWeight="0.50157726" side_tool="true" weight="0.26494345" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3280757" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3280757" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.328594" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.35173503" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.29810727" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.329653" />
+      <window_info anchor="bottom" id="SQL Generator" order="13" weight="0.38643533" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.25686592" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.42649436" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.328594" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3280757" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -462,332 +570,321 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/routes/web.php</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Resources/Task.php" />
-    <entry file="file://$PROJECT_DIR$/app/Task.php" />
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DemoController.php">
+    <entry file="file://$PROJECT_DIR$/app/models/umas/UsuarioPerfiles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        <state relative-caret-position="90">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+    <entry file="file://$PROJECT_DIR$/app/models/umas/Perfiles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/umas/Persona.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/umas/Usuarios.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="48" lean-forward="true" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2018_11_05_211756_create_demos_table.php" />
-    <entry file="file://$PROJECT_DIR$/.env.example">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="58" selection-start-line="66" selection-start-column="58" selection-end-line="66" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Resources/Demo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DemoController.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/Demo.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Resources/User.php" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+    <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+        <state relative-caret-position="-615">
+          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/umas/MTCLIENTSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="135" column="36" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_11_213906_create_MT_ALUMNO_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
-          <caret line="87" column="36" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="67" column="19" lean-forward="true" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_09_185610_create_MT_CLIENT_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_11_223603_create_RA_NOTA_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Demo.php">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9cedf1cd-b0bd-4543-89bf-915e6dfb6de5/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Usuarios.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+    <entry file="das://9cedf1cd-b0bd-4543-89bf-915e6dfb6de5/schema/comunicados/table/usuario">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/MtClient.php">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d73bee5d-a6e5-4071-808d-fa39cab9ae89/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d73bee5d-a6e5-4071-808d-fa39cab9ae89/console_1.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="-7516" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://d73bee5d-a6e5-4071-808d-fa39cab9ae89/schema/comunicados_umas/table/ra_acteval_nota_det">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/MtCtaDoc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+    <entry file="das://d73bee5d-a6e5-4071-808d-fa39cab9ae89/schema/comunicados_umas/table/mt_ctadoc">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/MtDocum.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+    <entry file="das://d73bee5d-a6e5-4071-808d-fa39cab9ae89/schema/comunicados_umas/table/mt_alumno">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/RaActevalNotadet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+    <entry file="das://d73bee5d-a6e5-4071-808d-fa39cab9ae89/schema/comunicados_umas/table/usuarios">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/RaActEvalSeccion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+    <entry file="das://d73bee5d-a6e5-4071-808d-fa39cab9ae89/schema/comunicados_umas/table/ra_reservasala">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/RaActevalSecciondet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+    <entry file="das://d73bee5d-a6e5-4071-808d-fa39cab9ae89/schema/comunicados_umas/table/carrera">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/RaNota.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+    <entry file="das://d73bee5d-a6e5-4071-808d-fa39cab9ae89/schema/comunicados_umas/table/mt_client">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Ramo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+    <entry file="das://d73bee5d-a6e5-4071-808d-fa39cab9ae89/schema/comunicados_umas/table/mt_docum">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Persona.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+    <entry file="das://d73bee5d-a6e5-4071-808d-fa39cab9ae89/schema/comunicados_umas/table/ra_nota">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Perfiles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+    <entry file="das://d73bee5d-a6e5-4071-808d-fa39cab9ae89/schema/comunicados_umas/table/ramo">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/RaReservaSala.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234133_create_RAMO_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/umas/RAMOSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="214">
+          <caret line="80" column="38" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/UsuarioPerfiles.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234840_create_usuarios_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234855_create_usuario_perfiles_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/umas/PerfilesSeeder.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/umas/UsuariosSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        <state relative-caret-position="452">
+          <caret line="49" column="38" lean-forward="true" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Carrera.php">
+    <entry file="file://$PROJECT_DIR$/database/seeds/umas/UsuarioPerfilesSeeder.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/umas/RaActevalSeccionDetSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        <state relative-caret-position="442">
+          <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/MtAlumno.php">
+    <entry file="file://$PROJECT_DIR$/database/seeds/umas/PersonaSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/umas/RANOTASeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1830">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        <state relative-caret-position="385">
+          <caret line="59" column="38" lean-forward="true" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/umas/MTALUMNOSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="67" column="32" lean-forward="true" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
+        <state relative-caret-position="-108">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/database/seeds/umas/RANOTASeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="14" selection-end-column="16" />
+        <state relative-caret-position="290">
+          <caret line="341" column="26" selection-start-line="341" selection-start-column="26" selection-end-line="341" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_225908_create_ra_act_eval_seccion_table.php">
+    <entry file="file://$PROJECT_DIR$/database/seeds/umas/RaActevalNotaDetSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="42" column="68" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="68" />
+        <state>
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_230842_create_ra_acteval_seccion_det_table.php">
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="66" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="66" />
+        <state relative-caret-position="345">
+          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_231501_create_ra_acteval_nota_det_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_11_223603_create_RA_NOTA_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="63" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="63" />
+        <state relative-caret-position="214">
+          <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_232316_create_RA_RESERVASALA_table.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados/2018_12_08_203737_create_usuario_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="58" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="58" />
-          <folding>
-            <element signature="e#7#45#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234023_create_CARRERA_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234855_create_usuario_perfiles_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="60" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234910_create_perfiles_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/umas/CARRERA.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234133_create_RAMO_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234713_create_persona_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_234840_create_usuarios_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="52" />
+        <state relative-caret-position="249">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_233748_create_MT_CTADOC_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="97" column="8" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="11" />
+        <state relative-caret-position="90">
+          <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_233910_create_MT_DOCUM_table.php">
+    <entry file="file://$PROJECT_DIR$/app/models/umas/MtDocum.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Usuario.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Finanza.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/umas/MtCtaDoc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/comunicados/2018_12_09_203737_create_finanza_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="63" lean-forward="true" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JobsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="40" lean-forward="true" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="794" column="13" selection-start-line="794" selection-start-column="13" selection-end-line="794" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/umas/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="35" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/umas/FinanzaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

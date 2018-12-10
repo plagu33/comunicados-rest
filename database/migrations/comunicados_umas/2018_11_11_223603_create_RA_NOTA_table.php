@@ -17,7 +17,7 @@ class CreateRANOTATable extends Migration
             $table->decimal('PERIODO',3,0)->nullable();
             $table->string('CODSEDE',30)->nullable();
             $table->string('CODCARR',30)->nullable();
-            $table->double('NP',5,1)->nullable();
+            $table->double('NP',7,1)->nullable();
             $table->double('NE',5,1)->nullable();
             $table->double('NPR',5,1)->nullable();
             $table->double('NER',5,1)->nullable();

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Finanza;
+use App\MtCtaDoc;
 use App\Persona;
 use App\Usuario;
 use App\UsuarioPerfiles;
@@ -30,6 +32,28 @@ class JobsController extends Controller
             $usuario->contrasena = $persona->user->us_password;
             $usuario->save();
 
+        }
+
+        echo now();
+
+    }
+
+    public function GenerateFinanzas() {
+
+        $finanzas = MtCtaDoc::select("usuario","ano","cuota","monto","saldo","fecven","estado")->get();
+
+        Finanza::truncate();
+
+        foreach ($finanzas as $f) {
+            $finanza = new Finanza();
+            $finanza->id_usuario = $f->usuario;
+            $finanza->ano = $f->ano;
+            $finanza->cuota = $f->cuota;
+            $finanza->monto = $f->monto;
+            $finanza->saldo = $f->saldo;
+            $finanza->fecha_vencimiento = $f->fecven;
+            $finanza->estado = $f->estado;
+            $finanza->save();
         }
 
         echo now();

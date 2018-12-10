@@ -23,8 +23,8 @@ class CreateMTCTADOCTable extends Migration
             $table->string('CODCARR',30)->nullable();
             $table->decimal('CUOTA',2,0)->nullable();
             $table->decimal('NUMCUOT',2,0)->nullable();
-            $table->decimal('MONTO',12,2)->nullable();
-            $table->decimal('SALDO',12,2)->nullable();
+            $table->integer('MONTO')->nullable();
+            $table->integer('SALDO')->nullable();
             $table->dateTime('FECVEN')->nullable();
             $table->dateTime('FECDEUDA')->nullable();
             $table->decimal('ESTADO',2,0)->nullable();
