@@ -40,5 +40,12 @@ class UsuarioPerfilesSeeder extends Seeder
         $usuarioperfil->id_usuario = "5014";
         $usuarioperfil->id_perfil = "65";
         $usuarioperfil->save();
+
+        $usuarioperfil = new \App\UsuarioPerfiles();
+        $usuarioperfil->id_usuarioperfil = "1899";
+        $usuarioperfil->id_usuario = "3551";
+        $usuarioperfil->id_perfil = "64";
+        $usuarioperfil->save();
+
     }
 }

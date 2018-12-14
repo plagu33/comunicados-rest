@@ -7,6 +7,7 @@ use App\MtCtaDoc;
 use App\Persona;
 use App\Usuario;
 use App\UsuarioPerfiles;
+use Carbon\Carbon;
 
 class JobsController extends Controller
 {
@@ -39,6 +40,11 @@ class JobsController extends Controller
     }
 
     public function GenerateFinanzas() {
+
+        /*
+            $new_date = Carbon::createFromFormat("Y-m-d","2018-09-30");
+            echo $new_date->format("m");
+        */
 
         $finanzas = MtCtaDoc::select("usuario","ano","cuota","monto","saldo","fecven","estado")->get();
 
