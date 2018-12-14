@@ -46,7 +46,7 @@ class JobsController extends Controller
             echo $new_date->format("m");
         */
 
-        $finanzas = MtCtaDoc::select("usuario","ano","cuota","monto","saldo","fecven","estado")->get();
+        $finanzas = MtCtaDoc::select("usuario","ano","cuota","monto","saldo","fecven","estado")->where("estado",2)->get();
 
         Finanza::truncate();
 

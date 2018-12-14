@@ -25,7 +25,7 @@ class MT_CTADOCSeeder extends Seeder
         $mtctadoc->SALDO = "159500";
         $mtctadoc->FECVEN = "2018-09-30 00:00:00";
         $mtctadoc->FECDEUDA = "2017-12-12 00:00:00";
-        $mtctadoc->ESTADO = "2";
+        $mtctadoc->ESTADO = "1";
         $mtctadoc->UBICACION = "1";
         $mtctadoc->RECIBIDO = "s";
         $mtctadoc->FECREP = "2017-12-12 00:00:00";
@@ -107,7 +107,7 @@ class MT_CTADOCSeeder extends Seeder
         $mtctadoc->SALDO = "159500";
         $mtctadoc->FECVEN = "2018-10-31 00:00:00";
         $mtctadoc->FECDEUDA = "2017-12-12 00:00:00";
-        $mtctadoc->ESTADO = "2";
+        $mtctadoc->ESTADO = "1";
         $mtctadoc->UBICACION = "1";
         $mtctadoc->RECIBIDO = "s";
         $mtctadoc->FECREP = "2017-12-12 00:00:00";
