@@ -93,11 +93,6 @@ class RAMOSeeder extends Seeder
         $ramos->save();
 
         $ramos = new \App\Ramo();
-        $ramos->CODRAMO = "CA306NICIRE";
-        $ramos->NOMBRE = "TALLER METODOLOGICO PARA DESARROLLO DE PROYECTOS";
-        $ramos->save();
-
-        $ramos = new \App\Ramo();
         $ramos->CODRAMO = "CA401NICIRE";
         $ramos->NOMBRE = "GESTION DE PROCESOS DE NEGOCIOS Y ARQUITECTURA DE SERVICIOS";
         $ramos->save();

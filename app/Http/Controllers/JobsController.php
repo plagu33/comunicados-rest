@@ -3,8 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Finanza;
+use App\MtAlumno;
 use App\MtCtaDoc;
 use App\Persona;
+use App\RaActevalNotadet;
+use App\RaActEvalSeccion;
+use App\RaActEvalSecciondet;
+use App\Ramo;
+use App\RaNota;
 use App\Usuario;
 use App\UsuarioPerfiles;
 use Carbon\Carbon;
@@ -63,6 +69,76 @@ class JobsController extends Controller
         }
 
         echo now();
+
+    }
+
+    public function GenerateNotas() {
+
+        //$alumnos = MtAlumno::select("CODCLI","CODCARPR","USUARIO","ESTFINAN")->where("ESTACAD","VIGENTE")->get();
+        $alumnos = MtAlumno::select("CODCLI","USUARIO")->where("ESTACAD","VIGENTE")->get();
+
+        //importante CODCLI, USUARIO
+
+        //dd($alumnos);
+
+        foreach ($alumnos as $alumno) {
+
+            //echo $alumno->CODCARPR."<br>";
+
+            //$notas = RaNota::select("CODSECC","CODRAMO","NP","NPR","NF","ESTADO","ASISTENCIA")->where("CODCLI",$alumno->CODCLI)->where("CODCARR",$alumno->CODCARPR)->get();
+
+            //dd($notas);
+
+            /*foreach ($notas as $nota) {
+
+                echo $nota->CODRAMO;
+
+                $lineas_ejercicios = RaActEvalSecciondet::where("CodRamo",$nota->CODRAMO)->get();
+
+                dd($lineas_ejercicios);
+
+            }*/
+
+            $lineas = RaActevalNotadet::where("CodCLi",$alumno->CODCLI)->get();
+
+            foreach ($lineas as $linea) {
+
+                /*
+                echo $linea->Codcarr."<br>";
+                echo $linea->CodRamo."<br>";
+                echo $linea->CodSecc."<br>";
+                echo $linea->actividad."<br>";
+                echo $linea->Linea."<br><br>";
+                */
+
+                $ll = RaActEvalSecciondet::where("Codcarr",$linea->Codcarr)
+                                        ->where("CodRamo",$linea->CodRamo)
+                                        ->where("CodSecc",$linea->CodSecc)
+                                        ->where("actividad",$linea->actividad)
+                                        ->where("Linea",$linea->Linea)->get();
+
+                foreach ($ll as $l) {
+
+                    //echo $l->CodRamo."<br>";
+
+                    //$ramo = Ramo::where("CODRAMO",$l->CodRamo)->first();
+
+                    echo $l->actividad."-";
+                    echo $l->Linea."<br>";
+                    echo $l->CodRamo."<br>";
+                    //echo $ramo->NOMBRE."<br>";
+                    echo $l->Porcentaje."<br>";
+                    echo $l->Codcarr."<br>";
+                    echo $linea->Nota."<br>";
+                    echo $alumno->USUARIO."<br>";
+
+                    echo "-------<br>";
+
+                }
+
+            }
+
+        }
 
     }
 

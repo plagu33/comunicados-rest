@@ -14,15 +14,16 @@ class CreateUsuarioTable extends Migration
     public function up()
     {
         Schema::create('usuario', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nombre',100);
-            $table->string('apellido',100);
-            $table->string('rut',20);
-            $table->integer('id_usuario');
-            $table->integer('id_persona');
-            $table->integer('id_perfil');
-            $table->string('usuario',100);
-            $table->string('contrasena',100);
+            $table->increments('id')->comment("ID incrementable de la tabla");
+            $table->string('nombre',100)->comment("Nombre del usuario");
+            $table->string('apellido',100)->comment("Apellido del usuario");
+            $table->string('rut',20)->comment("Rut del usuario");
+            $table->integer('id_usuario')->comment("id del usuario, con el cuál se identifica en el sistema de umas");
+            $table->integer('id_persona')->comment("id de la persona, para identificar los datos de esta persona en el sistema de umas");
+            $table->integer('id_perfil')->comment("identificador del perfil del usuario");
+            $table->string('usuario',100)->comment("nombre de usuario del inicio de session");
+            $table->string('contrasena',100)->comment("contraseña del usuario");
+            $table->string('token_firebase',100)->comment("Token de identificación firebase");
         });
     }
 
