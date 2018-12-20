@@ -23,7 +23,6 @@ class CreateUsuarioTable extends Migration
             $table->integer('id_perfil')->comment("identificador del perfil del usuario");
             $table->string('usuario',100)->comment("nombre de usuario del inicio de session");
             $table->string('contrasena',100)->comment("contraseña del usuario");
-            $table->string('token_firebase',100)->comment("Token de identificación firebase");
         });
     }
 
