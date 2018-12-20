@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e41aff9-91be-4cf5-849e-acbda332f6a9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/comunicados/2018_12_08_203737_create_usuario_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/comunicados/2018_12_08_203737_create_usuario_table.php" afterDir="false" />
-    </list>
+    <list default="true" id="7e41aff9-91be-4cf5-849e-acbda332f6a9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +118,7 @@
           <entry key="mt_client" value="1" />
           <entry key="mt_ctadoc" value="1" />
           <entry key="mt_docum" value="1" />
-          <entry key="php" value="648" />
+          <entry key="php" value="661" />
           <entry key="ra_acteval_nota_det" value="1" />
           <entry key="ra_nota" value="1" />
           <entry key="ra_reservasala" value="1" />
@@ -137,7 +134,7 @@
           <entry key="Blade" value="3" />
           <entry key="Database Element" value="17" />
           <entry key="JSON" value="1" />
-          <entry key="PHP" value="645" />
+          <entry key="PHP" value="658" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Scratch" value="4" />
         </counts>
@@ -146,7 +143,7 @@
         <counts>
           <entry key="dummy" value="87" />
           <entry key="env" value="29" />
-          <entry key="php" value="11908" />
+          <entry key="php" value="12261" />
           <entry key="txt" value="27" />
         </counts>
       </usages-collector>
@@ -154,13 +151,13 @@
         <counts>
           <entry key=".env file" value="29" />
           <entry key="Blade" value="44" />
-          <entry key="PHP" value="11864" />
+          <entry key="PHP" value="12217" />
           <entry key="PLAIN_TEXT" value="114" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="21" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="2" />
@@ -182,17 +179,7 @@
     <favorites_list name="comunicados-rest" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/comunicados/2018_12_08_203737_create_usuario_firebase_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -233,9 +220,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/seeds/umas/RaActevalSeccionDet.php" />
-        <option value="$PROJECT_DIR$/database/seeds/umas/CARRERASeeder.php" />
-        <option value="$PROJECT_DIR$/database/seeds/umas/MT_DOCUMSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/umas/RA_RESERVASALASeeder.php" />
         <option value="$PROJECT_DIR$/database/migrations/comunicados_umas/2018_11_19_231501_create_ra_acteval_nota_det_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/umas/RaActEvalSeccionSeeder.php" />
@@ -284,6 +268,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/JobsController.php" />
         <option value="$PROJECT_DIR$/database/migrations/comunicados/2018_12_08_203737_create_usuario_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/comunicados/2018_12_08_203737_create_usuario_firebase_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/umas/FirebaseController.php" />
+        <option value="$PROJECT_DIR$/app/models/UsuarioFirebase.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/FirebaseController.php" />
       </list>
     </option>
   </component>
@@ -432,6 +419,12 @@
             <path>
               <item name="comunicados-rest" type="b2602c69:ProjectViewProjectNode" />
               <item name="comunicados-rest" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comunicados-rest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comunicados-rest" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -478,17 +471,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/database/migrations/comunicados" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/umas" />
       <recent name="$PROJECT_DIR$/app/models" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/umas" />
+      <recent name="$PROJECT_DIR$/database/migrations/comunicados" />
       <recent name="$PROJECT_DIR$/app/Http/Resources" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/database/migrations/comunicados" />
       <recent name="$PROJECT_DIR$/app/models" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/umas" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
       <recent name="$PROJECT_DIR$/app/models/umas" />
     </key>
   </component>
@@ -537,12 +530,12 @@
       <workItem from="1544895649631" duration="1371000" />
       <workItem from="1544992584879" duration="5264000" />
       <workItem from="1545065433182" duration="11983000" />
-      <workItem from="1545281466865" duration="429000" />
+      <workItem from="1545281466865" duration="2161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103175000" />
+    <option name="totallyTimeSpent" value="104907000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -555,9 +548,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984227" visible="true" weight="0.4184168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984227" visible="true" weight="0.33764136" />
       <window_info id="Structure" order="1" sideWeight="0.50157726" side_tool="true" weight="0.26494345" />
       <window_info id="npm" order="2" sideWeight="0.50157726" side_tool="true" weight="0.26494345" />
       <window_info id="Favorites" order="3" sideWeight="0.50157726" side_tool="true" weight="0.26494345" />
@@ -572,7 +564,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3280757" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.328594" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.29810727" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.29810727" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.329653" />
       <window_info anchor="bottom" id="SQL Generator" order="13" weight="0.38643533" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -623,20 +615,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://d73bee5d-a6e5-4071-808d-fa39cab9ae89/schema/comunicados_umas/table/usuarios">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d73bee5d-a6e5-4071-808d-fa39cab9ae89/schema/comunicados_umas/table/ra_reservasala">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://d73bee5d-a6e5-4071-808d-fa39cab9ae89/schema/comunicados_umas/table/carrera">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -717,24 +695,10 @@
     <entry file="file://$PROJECT_DIR$/app/models/umas/MtDocum.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Usuario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Finanza.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -850,20 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/umas/FinanzaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/umas/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/umas/RaActevalSecciondet.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -885,16 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JobsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="129" column="47" lean-forward="true" selection-start-line="129" selection-start-column="47" selection-end-line="129" selection-end-column="47" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -956,8 +896,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/comunicados/2018_12_08_203737_create_usuario_firebase_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+        <state relative-caret-position="360">
+          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Finanza.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Usuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/JobsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="44" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FirebaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="123" selection-start-line="26" selection-start-column="123" selection-end-line="26" selection-end-column="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/umas/FinanzaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/UsuarioFirebase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/umas/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="38" />
         </state>
       </provider>
     </entry>
