@@ -5,7 +5,8 @@ return [
     /*
      * CUSTOM
     */
-    'token' => env('TOKEN_APP','0'),
+    'fcmtoken' => env('FCM_TOKEN','0'),
+    'fcmurl' => env('FCM_URL','0'),
 
     /*
     |--------------------------------------------------------------------------
