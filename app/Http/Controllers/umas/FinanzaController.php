@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Finanza;
+use App\UsuarioFirebase;
 use Illuminate\Http\Request;
 
 class FinanzaController extends Controller
 {
     /**
-     * login
+     * finanzas
      *
      * @return \Illuminate\Http\Response
      */
@@ -24,6 +25,10 @@ class FinanzaController extends Controller
             }else{
                 return response()->json(["status"=>"not found"],200);
             }
+
+            //$token = UsuarioFirebase::select("token")->where("usuario_id",$id)->first()['token'];
+
+            //$notify = FcmNotification($title,$body,$token,$actividad);
 
         }
 

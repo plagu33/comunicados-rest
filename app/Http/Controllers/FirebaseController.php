@@ -39,27 +39,25 @@ class FirebaseController extends Controller
 
         }
 
+        FcmNotification("","Token actualizado",$token,null);
+;
     }
-
-    public function notificacion()
+/*
+    public function notificacion($title,$body,$token,$actividad)
     {
 
         //$title,$token
+        //$actividad "cl.mmerino.counicados.horario"
         $fcmUrl   = config("app.fcmurl");
         $fcmtoken = config("app.fcmtoken"); //Legacy server key
-
-        $title = "demo 6";
-        $body = "cuerpo del mensajes 666";
-        //$token = "ed9g_yrUv2c:APA91bGCgZv4Pdws3BMKEi_lpcYqReuVUnTDBGpY8bmo_WsrtL5WNr0_NtvnGMcdFHWdsZr9jEked9q7g8t2DJMvUy7AVM5xzYoUSYOZ0OpsWuzvdzNdCsUUPys4kxpTgEkt3kTi-qEE";
-        $token = "cWRs1vjWNhc:APA91bEZyjvWChIxnY_cMuJh3Gub13qsAKfLzCJQ9QnHR7gjJnIclploVhTQ9QXUcmJ4x9VH4Cv41zNyOEXDN4oh0UjinGP0qi9mx57aNLTGIc_QfO_bBKo3mMSZicNxxUipC_r0gBJv";
 
         $notification = [
             "title" => $title,
             "body" => $body,
             "android_channel_id" => "1986",
             "sound" => "default",
-            "color" => "#ff2933",
-            "click_action" => "cl.mmerino.counicados.horario"
+            "color" => "#2196F3",
+            "click_action" => $actividad
         ];
 
         $extraNotificationData = ["message" => $notification,"datos" =>'data de prueba'];
@@ -99,7 +97,7 @@ class FirebaseController extends Controller
 
         $usuarios = Usuario::all();
 
-        $i=0;
+        $i=1;
 
         foreach ($usuarios as $usuario) {
 
@@ -156,5 +154,5 @@ class FirebaseController extends Controller
         return 1;
 
     }
-
+*/
 }
