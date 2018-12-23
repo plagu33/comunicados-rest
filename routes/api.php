@@ -44,3 +44,5 @@ Route::get('firebase/notificacion','FirebaseController@notificacion');
 Route::get('jobusers','JobsController@GenerateUsers');
 Route::get('jobfinanzas','JobsController@GenerateFinanzas');
 Route::get('jobnotas','JobsController@GenerateNotas');
+
+Route::get('firebase/notificaciontest','FirebaseController@notificaciontest');
