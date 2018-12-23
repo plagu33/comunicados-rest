@@ -9,9 +9,8 @@
 function FcmNotification($title,$body,$token,$actividad)
 {
 
-    //$title,$token
     //$actividad "cl.mmerino.counicados.horario"
-    $fcmUrl   = config("app.fcmurl");
+    $fcmUrl   = config("app.fcmurl"); //url
     $fcmtoken = config("app.fcmtoken"); //Legacy server key
 
     $notification = [

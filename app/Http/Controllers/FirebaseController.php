@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Usuario;
 use App\UsuarioFirebase;
 use Illuminate\Http\Request;
 
 class FirebaseController extends Controller
 {
     /**
-     * save token firebase
+     * firebase
      *
      * @return \Illuminate\Http\Response
      */
@@ -39,8 +38,8 @@ class FirebaseController extends Controller
 
         }
 
-        FcmNotification("","Token actualizado",$token,null);
-;
+        FcmNotification("New Token","Actualización del Token Firebase",$token,null);
+
     }
 /*
     public function notificacion($title,$body,$token,$actividad)

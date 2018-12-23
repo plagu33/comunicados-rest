@@ -39,10 +39,10 @@ Route::delete('task/{id}','TaskController@destroy');
 Route::post('login','LoginController@login');
 Route::get('finanzas/{id}','FinanzaController@ObtenerFinanzas');
 Route::post('firebase/token','FirebaseController@saveToken');
-Route::get('firebase/notificacion','FirebaseController@notificacion');
+//Route::get('firebase/notificacion','FirebaseController@notificacion');
 
 Route::get('jobusers','JobsController@GenerateUsers');
 Route::get('jobfinanzas','JobsController@GenerateFinanzas');
 Route::get('jobnotas','JobsController@GenerateNotas');
 
-Route::get('firebase/notificaciontest','FirebaseController@notificaciontest');
+//Route::get('firebase/notificaciontest','FirebaseController@notificaciontest');
