@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Usuario;
 use App\UsuarioFirebase;
 use Illuminate\Http\Request;
 
@@ -39,6 +40,24 @@ class FirebaseController extends Controller
         }
 
         FcmNotification("New Token","Actualización del Token Firebase",$token,null);
+
+    }
+
+    public function getContactos($id)
+    {
+
+        //$id de usuario
+        //64 alumno
+        //65 docente
+        //190 secretaria
+
+        $contactos = Usuario::select("nombre","apellido","id_usuario")->where("id_perfil",$id)->orderBy("nombre","asc")->get();
+
+        if ( count($contactos)>0 ) {
+            return response()->json($contactos,200);
+        }else{
+            return response()->json(["status"=>"Sin contactos"],200);
+        }
 
     }
 /*

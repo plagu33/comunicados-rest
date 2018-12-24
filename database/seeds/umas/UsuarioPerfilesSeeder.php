@@ -20,7 +20,7 @@ class UsuarioPerfilesSeeder extends Seeder
         $usuarioperfil = new \App\UsuarioPerfiles();
         $usuarioperfil->id_usuarioperfil = "1895";
         $usuarioperfil->id_usuario = "6575";
-        $usuarioperfil->id_perfil = "160";
+        $usuarioperfil->id_perfil = "190";
         $usuarioperfil->save();
 
         $usuarioperfil = new \App\UsuarioPerfiles();
@@ -32,7 +32,7 @@ class UsuarioPerfilesSeeder extends Seeder
         $usuarioperfil = new \App\UsuarioPerfiles();
         $usuarioperfil->id_usuarioperfil = "1897";
         $usuarioperfil->id_usuario = "5668";
-        $usuarioperfil->id_perfil = "160";
+        $usuarioperfil->id_perfil = "190";
         $usuarioperfil->save();
 
         $usuarioperfil = new \App\UsuarioPerfiles();
