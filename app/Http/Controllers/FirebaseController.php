@@ -51,7 +51,7 @@ class FirebaseController extends Controller
         //65 docente
         //190 secretaria
 
-        $contactos = Usuario::select("nombre","apellido","id_usuario")->where("id_perfil",$id)->orderBy("nombre","asc")->get();
+        $contactos = Usuario::where("id_perfil",$id)->orderBy("nombre","asc")->get();
 
         if ( count($contactos)>0 ) {
             return response()->json($contactos,200);
