@@ -51,10 +51,30 @@ class FirebaseController extends Controller
         //65 docente
         //190 secretaria
 
-        $contactos = Usuario::where("id_perfil",$id)->orderBy("nombre","asc")->get();
+        $usuario = Usuario::select("id_perfil")->where("id_usuario",$id)->first();
 
-        if ( count($contactos)>0 ) {
-            return response()->json($contactos,200);
+        if ($usuario["id_perfil"])
+        {
+
+            switch ($usuario["id_perfil"])
+            {
+                case 64: //alumno
+                    $contactos = Usuario::where("id_perfil",65)->orderBy("nombre","asc")->get();
+                break;
+                case 65: //docente
+                    $contactos = Usuario::where("id_perfil",64)->orWhere("id_perfil",190)->orderBy("nombre","asc")->get();
+                break;
+                case 190: //secretaria
+                    $contactos = Usuario::where("id_perfil",64)->orWhere("id_perfil",65)->orderBy("nombre","asc")->get();
+                break;
+            }
+
+            if ( count($contactos)>0 ) {
+                return response()->json($contactos,200);
+            }else{
+                return response()->json(["status"=>"Sin contactos"],200);
+            }
+
         }else{
             return response()->json(["status"=>"Sin contactos"],200);
         }
