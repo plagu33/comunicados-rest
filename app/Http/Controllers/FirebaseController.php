@@ -19,11 +19,15 @@ class FirebaseController extends Controller
         $usuario_id = $request->input('id');
         $token      = $request->input('token');
 
-        if ($request->isMethod('post')) {
+        if ($request->isMethod('post'))
+        {
 
             $uf = UsuarioFirebase::where("usuario_id",$usuario_id)->first();
 
-            if ($uf == null) {
+            if ($uf == null)
+            {
+
+                UsuarioFirebase::where("token",$token)->delete();
 
                 $nuevo_usuario_firebase = new UsuarioFirebase();
                 $nuevo_usuario_firebase->usuario_id = $usuario_id;
