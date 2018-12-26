@@ -11,6 +11,7 @@ class PersonaSeeder extends Seeder
      */
     public function run()
     {
+
         $persona = new \App\Persona();
         $persona->id_persona = "3404";
         $persona->pe_nombrecompleto = "alvaro perez diaz";
@@ -58,11 +59,20 @@ class PersonaSeeder extends Seeder
 
         $persona = new \App\Persona();
         $persona->id_persona = "1111";
-        $persona->pe_nombrecompleto = "Manuel Arturo Meriño Cáceres	";
+        $persona->pe_nombrecompleto = "Manuel Arturo Meriño Cáceres";
         $persona->pe_nombres = "Manuel";
         $persona->pe_appaterno = "Meriño";
         $persona->pe_apmaterno = "Cáceres";
         $persona->pe_rut = "163403951";
+        $persona->save();
+
+        $persona = new \App\Persona();
+        $persona->id_persona = "2222";
+        $persona->pe_nombrecompleto = "Docente demo";
+        $persona->pe_nombres = "Docente";
+        $persona->pe_appaterno = "demo";
+        $persona->pe_apmaterno = "demo";
+        $persona->pe_rut = "111111111";
         $persona->save();
 
     }
