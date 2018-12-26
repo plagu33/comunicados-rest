@@ -6,7 +6,7 @@
  * Time: 7:25 PM
  */
 
-function FcmNotification($title,$body,$token,$actividad)
+function FcmNotification($title,$body,$token,$actividad=null,$extra_data=null)
 {
 
     //$actividad "cl.mmerino.counicados.horario"
@@ -22,7 +22,26 @@ function FcmNotification($title,$body,$token,$actividad)
         "click_action" => $actividad
     ];
 
-    $extraNotificationData = ["message" => $notification,"datos" =>'data de prueba'];
+    //$extraNotificationData = ["message" => $notification,"data" => $extra_data];
+
+    $fcmNotification = [
+        //'registration_ids' => $tokenList, //multple token array
+        'to'        => $token, //single token
+        'notification' => $notification,
+        'data' => $extra_data
+    ];
+
+    /*
+    $notification = [
+        "title" => $title,
+        "body" => $body,
+        "android_channel_id" => "1986",
+        "sound" => "default",
+        "color" => "#2196F3",
+        "click_action" => $actividad
+    ];
+
+    $extraNotificationData = ["message" => $notification,"data" => $extra_data];
 
     $fcmNotification = [
         //'registration_ids' => $tokenList, //multple token array
@@ -30,6 +49,7 @@ function FcmNotification($title,$body,$token,$actividad)
         'notification' => $notification,
         'data' => $extraNotificationData
     ];
+     */
 
     $headers = [
         'Authorization: key='.$fcmtoken,
@@ -46,6 +66,6 @@ function FcmNotification($title,$body,$token,$actividad)
     $result = curl_exec($ch);
     curl_close($ch);
 
-    return 1;
+    return true;
 
 }

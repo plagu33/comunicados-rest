@@ -41,6 +41,7 @@ Route::get('finanzas/{id}','FinanzaController@ObtenerFinanzas');
 Route::post('firebase/token','FirebaseController@saveToken');
 //Route::get('firebase/notificacion','FirebaseController@notificacion');
 Route::get('getContactos/{id}','FirebaseController@getContactos');
+Route::post('mensaje','FirebaseController@enviarMensaje');
 
 Route::get('jobusers','JobsController@GenerateUsers');
 Route::get('jobfinanzas','JobsController@GenerateFinanzas');
