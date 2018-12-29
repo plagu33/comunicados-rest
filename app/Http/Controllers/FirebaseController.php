@@ -94,7 +94,7 @@ class FirebaseController extends Controller
 
             if (! (Usuario::where("id_usuario",$id)->exists()) || !(Usuario::where("id_usuario",$destinatario)->exists()) )
             {
-                return response()->json(["status"=>"usuarios no existen"],200);
+                return response()->json(["status"=>"usuario no existe"],200);
             }
 
             $room = Room::where("id_usuario_inicio",$id)->where("id_usuario_destino",$destinatario)->first();
@@ -154,6 +154,58 @@ class FirebaseController extends Controller
         {
             FcmNotification($nombre,$mensaje,$token["token"],"cl.mmerino.counicados.mensaje",$extra_data);
         }
+
+    }
+
+    public function getMensajes(Request $request)
+    {
+
+        $id = $request->input("id");
+        $destinatario = $request->input("destinatario");
+
+        $room = Room::where("id_usuario_inicio",$id)->where("id_usuario_destino",$destinatario)->first();
+
+        if ($room==null)
+        {
+
+            $room = Room::where("id_usuario_inicio", $destinatario)->where("id_usuario_destino", $id)->first();
+
+            if ($room == null)
+            {
+
+                return response()->json("Sin conversaciones",200);
+
+            }else{
+
+                $mensajes = $this->getMensajesDetalle($room["id"]);
+                return response()->json($mensajes,200);
+
+            }
+
+        }else{
+
+            $mensajes = $this->getMensajesDetalle($room["id"]);
+            return response()->json($mensajes,200);
+
+        }
+
+    }
+
+    public function getMensajesDetalle($room_id)
+    {
+
+        if ($room_id>0)
+        {
+
+            $mensajes = RoomUsuario::select("usuario_id","mensaje","created_at")->where("room_id",$room_id)->get();
+            return $mensajes;
+
+        }else{
+
+            return response()->json("Sin conversaciones",200);
+
+        }
+
     }
 
 }
