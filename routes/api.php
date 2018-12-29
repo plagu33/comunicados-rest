@@ -15,38 +15,17 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-// get list of tasks
-Route::get('tasks','TaskController@index');
-// get specific task
-Route::get('task/{id}','TaskController@show');
-// create new task
-Route::post('task','TaskController@store');
-// update existing task
-Route::put('task','TaskController@store');
-// delete a task
-Route::delete('task/{id}','TaskController@destroy');
-// get list of tasks
-//Route::get('demos','DemoController@index');
-
-// create new demo
-//Route::post('demo','DemoController@store');
-
-//Route::get('login','LoginController@index'); //no tiene sentido, solo de prueba
-
 */
 
 Route::post('login','LoginController@login');
 Route::get('finanzas/{id}','FinanzaController@ObtenerFinanzas');
 Route::post('firebase/token','FirebaseController@saveToken');
 //Route::get('firebase/notificacion','FirebaseController@notificacion');
-Route::get('getContactos/{id}','FirebaseController@getContactos');
 
+Route::get('chat/getContactos/{id}','FirebaseController@getContactos');
 Route::post('chat/mensaje','FirebaseController@enviarMensaje');
 Route::post('chat/getMensajes','FirebaseController@getMensajes');
 
 Route::get('jobusers','JobsController@GenerateUsers');
 Route::get('jobfinanzas','JobsController@GenerateFinanzas');
 Route::get('jobnotas','JobsController@GenerateNotas');
-
-//Route::get('firebase/notificaciontest','FirebaseController@notificaciontest');
