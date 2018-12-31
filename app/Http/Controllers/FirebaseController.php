@@ -152,7 +152,7 @@ class FirebaseController extends Controller
 
         if ($token["token"]!="")
         {
-            FcmNotification($nombre,$mensaje,$token["token"],"cl.mmerino.counicados.mensaje",$extra_data);
+            FcmNotification($nombre,$mensaje,$token["token"],"cl.mmerino.comunicados.mensaje",$extra_data);
         }
 
     }
