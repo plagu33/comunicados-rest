@@ -59,6 +59,7 @@ class FirebaseController extends Controller
 
             switch ($usuario["id_perfil"])
             {
+
                 case 64: //alumno
                     $contactos = Usuario::where("id_perfil",65)->orderBy("nombre","asc")->get();
                 break;
@@ -68,16 +69,59 @@ class FirebaseController extends Controller
                 case 190: //secretaria
                     $contactos = Usuario::where("id_perfil",64)->orWhere("id_perfil",65)->orderBy("nombre","asc")->get();
                 break;
+
             }
 
-            if ( count($contactos)>0 ) {
+            if ( count($contactos)>0 )
+            {
                 return response()->json($contactos,200);
             }else{
                 return response()->json(["status"=>"Sin contactos"],200);
             }
 
         }else{
+
             return response()->json(["status"=>"Sin contactos"],200);
+
+        }
+
+    }
+
+    public function getContactosConMensajes($id)
+    {
+
+        $array = Array();
+
+        $rooms = Room::where("id_usuario_inicio",$id)->orWhere("id_usuario_destino",$id)->get();
+
+        foreach ($rooms as $room)
+        {
+
+            if( $room["id_usuario_inicio"]!=$id )
+            {
+
+                $id_usuario = $room["id_usuario_inicio"];
+
+            }
+
+            if( $room["id_usuario_destino"]!=$id )
+            {
+
+                $id_usuario = $room["id_usuario_destino"];
+
+            }
+
+            array_push($array,$id_usuario);
+
+        }
+
+        $contactos = Usuario::whereIn("id_usuario",$array)->orderBy("nombre","asc")->get();
+
+        if ( count($contactos)>0 )
+        {
+            return response()->json($contactos,200);
+        }else{
+            return response()->json(["status"=>"Sin conversaciones"],200);
         }
 
     }

@@ -15,14 +15,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
 */
 
 Route::post('login','LoginController@login');
 Route::get('finanzas/{id}','FinanzaController@ObtenerFinanzas');
 Route::post('firebase/token','FirebaseController@saveToken');
-//Route::get('firebase/notificacion','FirebaseController@notificacion');
 
 Route::get('chat/getContactos/{id}','FirebaseController@getContactos');
+Route::get('chat/getContactosConMensajes/{id}','FirebaseController@getContactosConMensajes');
 Route::post('chat/mensaje','FirebaseController@enviarMensaje');
 Route::post('chat/getMensajes','FirebaseController@getMensajes');
 
