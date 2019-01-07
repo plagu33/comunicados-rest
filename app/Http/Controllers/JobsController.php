@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Finanza;
 use App\MtAlumno;
 use App\MtCtaDoc;
+use App\Nota;
 use App\Persona;
 use App\RaActevalNotadet;
-use App\RaActEvalSeccion;
 use App\RaActEvalSecciondet;
 use App\Ramo;
 use App\RaNota;
@@ -72,73 +72,56 @@ class JobsController extends Controller
 
     }
 
-    public function GenerateNotas() {
+    public function GenerateNotas()
+    {
 
-        //$alumnos = MtAlumno::select("CODCLI","CODCARPR","USUARIO","ESTFINAN")->where("ESTACAD","VIGENTE")->get();
-        $alumnos = MtAlumno::select("CODCLI","USUARIO")->where("ESTACAD","VIGENTE")->get();
+        Nota::truncate();
 
-        //importante CODCLI, USUARIO
+        $alumnos = MtAlumno::select("CODCLI","USUARIO","CODCARPR")->where("ESTACAD","VIGENTE")->get();
 
-        //dd($alumnos);
+        foreach ($alumnos as $alumno)
+        {
 
-        foreach ($alumnos as $alumno) {
+            $notas = RaNota::select("*")->where("CODCLI",$alumno->CODCLI)->where("CODCARR",$alumno->CODCARPR)->get();
 
-            //echo $alumno->CODCARPR."<br>";
+            foreach ($notas as $nota)
+            {
 
-            //$notas = RaNota::select("CODSECC","CODRAMO","NP","NPR","NF","ESTADO","ASISTENCIA")->where("CODCLI",$alumno->CODCLI)->where("CODCARR",$alumno->CODCARPR)->get();
+                $ramo = Ramo::where("CODRAMO",$nota->RAMOEQUIV)->first();
 
-            //dd($notas);
+                $lineas = RaActevalNotadet::where("CodCLi",$nota->CODCLI)->where("CodRamo",$nota->RAMOEQUIV)->get();
 
-            /*foreach ($notas as $nota) {
+                foreach ($lineas as $linea)
+                {
 
-                echo $nota->CODRAMO;
+                    $ll = RaActEvalSecciondet::where("Codcarr",$linea->Codcarr)
+                        ->where("CodRamo",$linea->CodRamo)
+                        ->where("CodSecc",$linea->CodSecc)
+                        ->where("actividad",$linea->actividad)
+                        ->where("Linea",$linea->Linea)->get();
 
-                $lineas_ejercicios = RaActEvalSecciondet::where("CodRamo",$nota->CODRAMO)->get();
+                    foreach ($ll as $l)
+                    {
 
-                dd($lineas_ejercicios);
+                        $ranota = new Nota();
+                        $ranota->usuario_id = $alumno->USUARIO;
+                        $ranota->nombre_ramo = $ramo->NOMBRE;
+                        $ranota->codigo_ramo = $l->CodRamo;
+                        $ranota->codigo_carrera = $l->Codcarr;
+                        $ranota->tipo_nota = $l->actividad;
+                        $ranota->porcentaje = $l->Porcentaje;
+                        $ranota->nota = $linea->Nota;
+                        $ranota->save();
 
-            }*/
-
-            $lineas = RaActevalNotadet::where("CodCLi",$alumno->CODCLI)->get();
-
-            foreach ($lineas as $linea) {
-
-                /*
-                echo $linea->Codcarr."<br>";
-                echo $linea->CodRamo."<br>";
-                echo $linea->CodSecc."<br>";
-                echo $linea->actividad."<br>";
-                echo $linea->Linea."<br><br>";
-                */
-
-                $ll = RaActEvalSecciondet::where("Codcarr",$linea->Codcarr)
-                                        ->where("CodRamo",$linea->CodRamo)
-                                        ->where("CodSecc",$linea->CodSecc)
-                                        ->where("actividad",$linea->actividad)
-                                        ->where("Linea",$linea->Linea)->get();
-
-                foreach ($ll as $l) {
-
-                    //echo $l->CodRamo."<br>";
-
-                    //$ramo = Ramo::where("CODRAMO",$l->CodRamo)->first();
-
-                    echo $l->actividad."-";
-                    echo $l->Linea."<br>";
-                    echo $l->CodRamo."<br>";
-                    //echo $ramo->NOMBRE."<br>";
-                    echo $l->Porcentaje."<br>";
-                    echo $l->Codcarr."<br>";
-                    echo $linea->Nota."<br>";
-                    echo $alumno->USUARIO."<br>";
-
-                    echo "-------<br>";
+                    }
 
                 }
 
             }
 
         }
+
+        echo now();
 
     }
 

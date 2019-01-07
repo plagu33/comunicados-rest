@@ -45,7 +45,7 @@ class FirebaseController extends Controller
 
         }
 
-        FcmNotification("New Token","Actualización del Token Firebase",$token);
+        //FcmNotification("New Token","Actualización del Token Firebase",$token);
 
     }
 
