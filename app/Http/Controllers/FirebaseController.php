@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Nota;
 use App\Room;
 use App\RoomUsuario;
 use App\Usuario;
@@ -249,6 +250,22 @@ class FirebaseController extends Controller
             return response()->json("Sin conversaciones",200);
 
         }
+
+    }
+
+    public function getNotas($id)
+    {
+
+        $notas = Nota::select("codigo_ramo","nombre_ramo","tipo_nota","porcentaje","nota")->where("usuario_id",$id)->get();
+
+        if (count($notas)>0)
+        {
+            return response()->json($notas,200);
+        }else{
+            return response()->json("Sin Notas",200);
+        }
+
+
 
     }
 

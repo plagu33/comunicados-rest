@@ -26,6 +26,7 @@ Route::get('chat/getContactos/{id}','FirebaseController@getContactos');
 Route::get('chat/getContactosConMensajes/{id}','FirebaseController@getContactosConMensajes');
 Route::post('chat/mensaje','FirebaseController@enviarMensaje');
 Route::post('chat/getMensajes','FirebaseController@getMensajes');
+Route::get('getNotas/{id}','FirebaseController@getNotas');
 
 Route::get('jobusers','JobsController@GenerateUsers');
 Route::get('jobfinanzas','JobsController@GenerateFinanzas');
