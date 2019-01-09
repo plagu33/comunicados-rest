@@ -265,8 +265,6 @@ class FirebaseController extends Controller
             return response()->json("Sin Notas",200);
         }
 
-
-
     }
 
 }
