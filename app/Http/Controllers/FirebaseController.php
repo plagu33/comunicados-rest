@@ -217,7 +217,8 @@ class FirebaseController extends Controller
 
             if ($room == null)
             {
-                $arr = ["usuario_id"=>"","mensaje"=>"","created_at"=>""]; 
+                //$arr = ["usuario_id"=>"0","mensaje"=>"0","created_at"=>"0"]; 
+                $arr = array(["usuario_id"=>"0","mensaje"=>"0","created_at"=>"0"]);
                 return response()->json($arr,200);
 
             }else{
