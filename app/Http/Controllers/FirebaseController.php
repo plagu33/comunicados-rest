@@ -217,12 +217,12 @@ class FirebaseController extends Controller
 
             if ($room == null)
             {
-
-                return response()->json("Sin conversaciones",200);
+                $arr = ["usuario_id"=>"","mensaje"=>"","created_at"=>""]; 
+                return response()->json($arr,200);
 
             }else{
 
-                $mensajes = $this->getMensajesDetalle($room["id"]);
+                $mensajes = $this->getMensajesDetalle($room["id"]);               
                 return response()->json($mensajes,200);
 
             }
@@ -262,6 +262,8 @@ class FirebaseController extends Controller
         {
             return response()->json($notas,200);
         }else{
+            //esto nunca sucede, ya que el primer mensaje se crea en conjunto con la sala
+            //además no esta permitido borrar mensajes
             return response()->json("Sin Notas",200);
         }
 
