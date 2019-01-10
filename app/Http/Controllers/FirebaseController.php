@@ -256,7 +256,7 @@ class FirebaseController extends Controller
     public function getNotas($id)
     {
 
-        $notas = Nota::select("codigo_ramo","nombre_ramo","tipo_nota","porcentaje","nota")->where("usuario_id",$id)->get();
+        $notas = Nota::select("codigo_ramo","nombre_ramo","tipo_nota","porcentaje","nota")->orderBy("nombre_ramo","asc")->orderBy("tipo_nota","asc")->where("usuario_id",$id)->get();
 
         if (count($notas)>0)
         {
