@@ -17,9 +17,10 @@ use App\NotaTemp2;
 use App\Usuario;
 use App\UsuarioPerfiles;
 use App\UsuarioFirebase;
-use Carbon\Carbon;
-use DB;
 use App\Documento;
+
+use DB;
+use Carbon\Carbon;
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -35,7 +36,8 @@ class JobsController extends Controller
 
         Usuario::truncate();
 
-        foreach ($personas->get() as $persona) {
+        foreach ($personas->get() as $persona) 
+        {
 
             $perfil = UsuarioPerfiles::where('id_usuario',$persona->user->id_usuario)->first();
 
@@ -209,7 +211,7 @@ class JobsController extends Controller
 
     }
 
-    public function generateDocumentos ()
+    public function GenerateDocumentos ()
     {
 
         $sql_users = "SELECT
@@ -281,38 +283,41 @@ class JobsController extends Controller
 
             $files = DB::connection('aula')->select($sql_files);    
             
-            foreach($files as $file)
+            if (count($files)>0) 
             {
-
-                if ($file->filename!=".") 
+                
+                foreach($files as $file)
                 {
-                    
-                    $nombre_actividad = $file->activityname;
-                    //echo $file->linkurl."<br>";
-                    //echo $file->fileid."<br>";
-                    //echo $file->filepath."<br>";
-                    $nombre_archivo = $file->filename;
-                    $path = $file->filesystempath;
-                    //echo $file->fileuserid."<br>";
-                    $tipo = $file->mimetype;
 
-                    $documento = new Documento();
-                    $documento->username = $username;
-                    $documento->curso_id = $curso_id;
-                    $documento->nombre_curso = $nombre_curso;
-                    $documento->nombre_actividad = $nombre_actividad;
-                    $documento->nombre_archivo = $nombre_archivo;
-                    $documento->path = $path;
-                    $documento->tipo = $tipo;
-                    $documento->save();
+                    if ($file->filename!=".") 
+                    {
+                        
+                        $nombre_actividad = $file->activityname;
+                        //echo $file->linkurl."<br>";
+                        //echo $file->fileid."<br>";
+                        //echo $file->filepath."<br>";
+                        $nombre_archivo = $file->filename;
+                        $path = $file->filesystempath;
+                        //echo $file->fileuserid."<br>";
+                        $tipo = $file->mimetype;
+
+                        $documento = new Documento();
+                        $documento->username = $username;
+                        $documento->curso_id = $curso_id;
+                        $documento->nombre_curso = $nombre_curso;
+                        $documento->nombre_actividad = $nombre_actividad;
+                        $documento->nombre_archivo = $nombre_archivo;
+                        $documento->path = $path;
+                        $documento->tipo = $tipo;
+                        $documento->save();
+
+                    }
 
                 }
-
-                echo "-----end file------<br>";
-
+        
+            }else{
+                echo 1;
             }
-
-            echo "-----end course------<br>";
 
         }
 

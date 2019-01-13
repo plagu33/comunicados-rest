@@ -3,17 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Finanza;
-use App\UsuarioFirebase;
 use Illuminate\Http\Request;
 
 class FinanzaController extends Controller
 {
-    /**
-     * finanzas
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function ObtenerFinanzas(Request $request,$id)
+
+    public function getFinanzas(Request $request,$id)
     {
 
         if ($request->isMethod('get')) {

@@ -9,7 +9,7 @@
 function FcmNotification($title,$body,$token,$actividad=null,$extra_data=null)
 {
 
-    //$actividad "cl.mmerino.counicados.horario"
+    //$actividad  ejemplo "cl.mmerino.counicados.horario"
     $fcmUrl   = config("app.fcmurl"); //url
     $fcmtoken = config("app.fcmtoken"); //Legacy server key
 
@@ -22,34 +22,12 @@ function FcmNotification($title,$body,$token,$actividad=null,$extra_data=null)
         "click_action" => $actividad
     ];
 
-    //$extraNotificationData = ["message" => $notification,"data" => $extra_data];
-
     $fcmNotification = [
         //'registration_ids' => $tokenList, //multple token array
         'to'        => $token, //single token
         'notification' => $notification,
         'data' => $extra_data
     ];
-
-    /*
-    $notification = [
-        "title" => $title,
-        "body" => $body,
-        "android_channel_id" => "1986",
-        "sound" => "default",
-        "color" => "#2196F3",
-        "click_action" => $actividad
-    ];
-
-    $extraNotificationData = ["message" => $notification,"data" => $extra_data];
-
-    $fcmNotification = [
-        //'registration_ids' => $tokenList, //multple token array
-        'to'        => $token, //single token
-        'notification' => $notification,
-        'data' => $extraNotificationData
-    ];
-     */
 
     $headers = [
         'Authorization: key='.$fcmtoken,

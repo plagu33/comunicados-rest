@@ -2,35 +2,29 @@
 
 use Illuminate\Http\Request;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-*/
-
+//Login usuario
 Route::post('login','LoginController@login');
+
+//Refrescar token firebase
 Route::post('firebase/token','FirebaseController@saveToken');
 
-Route::get('chat/getContactos/{id}','FirebaseController@getContactos');
-Route::get('chat/getContactosConMensajes/{id}','FirebaseController@getContactosConMensajes');
-Route::post('chat/mensaje','FirebaseController@enviarMensaje');
-Route::post('chat/getMensajes','FirebaseController@getMensajes');
+//actividad de chat
+Route::get('chat/getContactos/{id}','MensajeController@getContactos');
+Route::get('chat/getContactosConMensajes/{id}','MensajeController@getContactosConMensajes');
+Route::post('chat/mensaje','MensajeController@enviarMensaje');
+Route::post('chat/getMensajes','MensajeController@getMensajes');
 
-Route::get('getNotas/{id}','FirebaseController@getNotas');
-Route::get('finanzas/{id}','FinanzaController@ObtenerFinanzas');
-Route::get('getDocumentos/{id}','FirebaseController@getDocumentos');
+//actividad notas
+Route::get('getNotas/{id}','NotaController@getNotas');
 
+//actividad finanzas
+Route::get('getFinanzas/{id}','FinanzaController@getFinanzas');
+
+//actividad documentos
+Route::get('getDocumentos/{id}','DocumentoController@getDocumentos');
+
+//jobs para traer los datos a la db de comunicad@s
 Route::get('jobusers','JobsController@GenerateUsers');
 Route::get('jobfinanzas','JobsController@GenerateFinanzas');
 Route::get('jobnotas','JobsController@GenerateNotas');
-Route::get('jobDocumentos','JobsController@generateDocumentos');
+Route::get('jobDocumentos','JobsController@GenerateDocumentos');

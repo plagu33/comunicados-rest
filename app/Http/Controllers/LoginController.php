@@ -7,11 +7,7 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    /**
-     * login
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function login(Request $request)
     {
 
