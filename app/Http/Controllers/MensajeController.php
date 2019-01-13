@@ -56,34 +56,52 @@ class MensajeController extends Controller
 
         $rooms = Room::where("id_usuario_inicio",$id)->orWhere("id_usuario_destino",$id)->get();
 
-        foreach ($rooms as $room)
+        if (count($rooms)>0) 
         {
 
-            if( $room["id_usuario_inicio"]!=$id )
+            foreach ($rooms as $room)
             {
 
-                $id_usuario = $room["id_usuario_inicio"];
+                if( $room["id_usuario_inicio"]!=$id )
+                {
+
+                    $id_usuario = $room["id_usuario_inicio"];
+
+                }
+
+                if( $room["id_usuario_destino"]!=$id )
+                {
+
+                    $id_usuario = $room["id_usuario_destino"];
+
+                }
+
+                array_push($array,$id_usuario);
 
             }
 
-            if( $room["id_usuario_destino"]!=$id )
+            /*
+                nombre	"Docente"
+                apellido	"demo"
+                rut	"111111111"
+                id_usuario	3552
+                id_persona	2222
+                id_perfil	65
+            */ 
+
+            $contactos = Usuario::whereIn("id_usuario",$array)->orderBy("nombre","asc")->get();
+
+            if ( count($contactos)>0 )
             {
-
-                $id_usuario = $room["id_usuario_destino"];
-
+                return response()->json($contactos,200);
+            }else{
+                $arr = array(["nombre"=>"0","apellido"=>"0","rut"=>"0","id_usuario"=>"0","id_persona"=>"0","id_perfil"=>"0"]);
+                return response()->json($arr,200);
             }
 
-            array_push($array,$id_usuario);
-
-        }
-
-        $contactos = Usuario::whereIn("id_usuario",$array)->orderBy("nombre","asc")->get();
-
-        if ( count($contactos)>0 )
-        {
-            return response()->json($contactos,200);
         }else{
-            return response()->json(["status"=>"Sin conversaciones"],200);
+            $arr = array(["nombre"=>"0","apellido"=>"0","rut"=>"0","id_usuario"=>"0","id_persona"=>"0","id_perfil"=>"0"]);
+            return response()->json($arr,200);
         }
 
     }
