@@ -18,6 +18,8 @@ use App\Usuario;
 use App\UsuarioPerfiles;
 use App\UsuarioFirebase;
 use Carbon\Carbon;
+use DB;
+use App\Documento;
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -204,6 +206,115 @@ class JobsController extends Controller
             $table->string('porcentaje',50)->comment("porcentaje que vale la nota");
             $table->double('nota',7,1)->comment("nota");
         });          
+
+    }
+
+    public function generateDocumentos ()
+    {
+
+        $sql_users = "SELECT
+            c.id AS courseid, 
+            c.fullname, 
+            u.username, 
+            u.firstname, 
+            u.lastname, 
+            u.email
+                                            
+            FROM mdl_role_assignments ra 
+
+            JOIN mdl_user u ON u.id = ra.userid
+            JOIN mdl_role r ON r.id = ra.roleid
+            JOIN mdl_context cxt ON cxt.id = ra.contextid
+            JOIN mdl_course c ON c.id = cxt.instanceid
+            
+            WHERE ra.userid = u.id
+                                            
+            AND ra.contextid = cxt.id
+            AND cxt.contextlevel = 50
+            AND cxt.instanceid = c.id";
+
+        $users = DB::connection('aula')->select($sql_users);
+
+        foreach( $users as $user )
+        {
+
+            $username = str_replace("-","",$user->username);
+            $curso_id = $user->courseid;
+            $nombre_curso = $user->fullname;
+            //echo $user->firstname."<br>";
+            //echo $user->lastname."<br>";
+
+            $sql_files = "SELECT cm.id, cm.course, cm.module, mdl.name AS type,
+                    CASE
+                        WHEN mf.name IS NOT NULL THEN mf.name
+                        WHEN mb.name IS NOT NULL THEN mb.name
+                        WHEN mr.name IS NOT NULL THEN mr.name
+                        WHEN mu.name IS NOT NULL THEN mu.name
+                        WHEN mq.name IS NOT NULL THEN mq.name
+                        WHEN mp.name IS NOT NULL THEN mp.name
+                        WHEN ml.name IS NOT NULL THEN ml.name
+                        ELSE NULL
+                    END AS activityname,
+                    CASE
+                        WHEN mf.name IS NOT NULL THEN CONCAT('/mod/forum/view.php?id=', cm.id)
+                        WHEN mb.name IS NOT NULL THEN CONCAT('/mod/book/view.php?id=', cm.id)
+                        WHEN mr.name IS NOT NULL THEN CONCAT('/mod/resource/view.php?id=', cm.id)
+                        WHEN mu.name IS NOT NULL THEN CONCAT('/mod/url/view.php?id=', cm.id)
+                        WHEN mq.name IS NOT NULL THEN CONCAT('/mod/quiz/view.php?id=', cm.id)
+                        WHEN mp.name IS NOT NULL THEN CONCAT('/mod/page/view.php?id=', cm.id)
+                        WHEN ml.name IS NOT NULL THEN CONCAT('/mod/lesson/view.php?id=', cm.id)
+                        ELSE NULL
+                    END AS linkurl, f.id AS fileid, f.filepath, f.filename, CONCAT('/filedir/', SUBSTRING(f.contenthash, 1, 2), '/', SUBSTRING(f.contenthash, 3, 2), '/', f.contenthash) AS filesystempath, f.userid AS fileuserid, f.filesize, f.mimetype, f.author AS fileauthor, f.timecreated, f.timemodified
+                    FROM mdl_course_modules AS cm
+                    INNER JOIN mdl_context AS ctx ON ctx.contextlevel = 70 AND ctx.instanceid = cm.id
+                    INNER JOIN mdl_modules AS mdl ON cm.module = mdl.id
+                    LEFT JOIN mdl_forum AS mf ON mdl.name = 'forum' AND cm.instance = mf.id
+                    LEFT JOIN mdl_book AS mb ON mdl.name = 'book' AND cm.instance = mb.id
+                    LEFT JOIN mdl_resource AS mr ON mdl.name = 'resource' AND cm.instance = mr.id
+                    LEFT JOIN mdl_url AS mu ON mdl.name = 'url' AND cm.instance = mu.id
+                    LEFT JOIN mdl_quiz AS mq ON mdl.name = 'quiz' AND cm.instance = mq.id
+                    LEFT JOIN mdl_page AS mp ON mdl.name = 'page' AND cm.instance = mp.id
+                    LEFT JOIN mdl_lesson AS ml ON mdl.name = 'lesson' AND cm.instance = ml.id
+                    LEFT JOIN mdl_files AS f ON f.contextid = ctx.id
+                    WHERE cm.course = $user->courseid
+                    AND mdl.name = 'resource'";
+
+            $files = DB::connection('aula')->select($sql_files);    
+            
+            foreach($files as $file)
+            {
+
+                if ($file->filename!=".") 
+                {
+                    
+                    $nombre_actividad = $file->activityname;
+                    //echo $file->linkurl."<br>";
+                    //echo $file->fileid."<br>";
+                    //echo $file->filepath."<br>";
+                    $nombre_archivo = $file->filename;
+                    $path = $file->filesystempath;
+                    //echo $file->fileuserid."<br>";
+                    $tipo = $file->mimetype;
+
+                    $documento = new Documento();
+                    $documento->username = $username;
+                    $documento->curso_id = $curso_id;
+                    $documento->nombre_curso = $nombre_curso;
+                    $documento->nombre_actividad = $nombre_actividad;
+                    $documento->nombre_archivo = $nombre_archivo;
+                    $documento->path = $path;
+                    $documento->tipo = $tipo;
+                    $documento->save();
+
+                }
+
+                echo "-----end file------<br>";
+
+            }
+
+            echo "-----end course------<br>";
+
+        }
 
     }
 

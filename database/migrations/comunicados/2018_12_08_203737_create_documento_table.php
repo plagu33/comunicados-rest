@@ -15,9 +15,13 @@ class CreateDocumentoTable extends Migration
     {
         Schema::create('documento', function (Blueprint $table) {
             $table->increments('id')->comment("ID incrementable de la tabla");
-            $table->integer('id_usuario')->comment("id del usuario dueño del documento");
-            $table->string('codigo_ramo',100)->comment("id ramo al que pertenece el documento");
-            $table->string('link',200)->comment("link del documento");
+            $table->string('username')->comment("rut del usuario dueño del documento");
+            $table->string('curso_id',191)->comment("id del curso");
+            $table->string('nombre_curso',191)->comment("nombre del curso");
+            $table->string('nombre_actividad',191)->comment("nombre de la actividad");
+            $table->string('nombre_archivo',191)->comment("nombre del archivo");
+            $table->string('path',191)->comment("path al archivo");
+            $table->string('tipo',191)->comment("formato del archivo");
         });
     }
 

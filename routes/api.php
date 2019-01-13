@@ -28,7 +28,9 @@ Route::post('chat/getMensajes','FirebaseController@getMensajes');
 
 Route::get('getNotas/{id}','FirebaseController@getNotas');
 Route::get('finanzas/{id}','FinanzaController@ObtenerFinanzas');
+Route::get('getDocumentos/{id}','FirebaseController@getDocumentos');
 
 Route::get('jobusers','JobsController@GenerateUsers');
 Route::get('jobfinanzas','JobsController@GenerateFinanzas');
 Route::get('jobnotas','JobsController@GenerateNotas');
+Route::get('jobDocumentos','JobsController@generateDocumentos');
