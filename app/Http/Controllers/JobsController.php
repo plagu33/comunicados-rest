@@ -177,7 +177,7 @@ class JobsController extends Controller
                 $user = UsuarioFirebase::where("usuario_id",$id_usuario)->first();
                 $token = $user["token"];
 
-                FcmNotification("Nueva calificación",$nombre_ramo,$token,"cl.mmerino.comunicados.notas");                
+                FcmNotification("Nueva calificación","Se ha agregado una nueva calificación a uno de tus ramos",$token,"cl.mmerino.comunicados.notas");                
 
             }
 
@@ -390,7 +390,7 @@ class JobsController extends Controller
                 $userF = UsuarioFirebase::where("usuario_id",$user["id_usuario"])->first();
                 $token = $userF["token"];
 
-                FcmNotification("Nuevo documento",$nombre_curso,$token,"cl.mmerino.comunicados.documentos");                
+                FcmNotification("Aulavirtual","Se ha agregado un nuevo documento a uno de tus cursos",$token,"cl.mmerino.comunicados.documentos");                
 
             }
 
