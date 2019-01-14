@@ -316,6 +316,9 @@ class JobsController extends Controller
                         $documento->tipo = $tipo;
                         $documento->save();
 
+                        $documento2 = json_decode($documento->replicate(),true);
+                        DocumentoTemp2::create($documento2);                        
+
                     }
 
                 }
