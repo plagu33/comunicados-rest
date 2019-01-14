@@ -80,15 +80,6 @@ class MensajeController extends Controller
 
             }
 
-            /*
-                nombre	"Docente"
-                apellido	"demo"
-                rut	"111111111"
-                id_usuario	3552
-                id_persona	2222
-                id_perfil	65
-            */ 
-
             $contactos = Usuario::whereIn("id_usuario",$array)->orderBy("nombre","asc")->get();
 
             if ( count($contactos)>0 )
