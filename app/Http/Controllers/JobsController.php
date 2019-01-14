@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use App\Finanza;
 use App\MtAlumno;
 use App\MtCtaDoc;
-use App\Nota;
 use App\Persona;
 use App\RaActevalNotadet;
 use App\RaActEvalSecciondet;
 use App\Ramo;
 use App\RaNota;
+use App\Nota;
 use App\NotaTemp;
 use App\NotaTemp1;
 use App\NotaTemp2;
@@ -18,6 +18,9 @@ use App\Usuario;
 use App\UsuarioPerfiles;
 use App\UsuarioFirebase;
 use App\Documento;
+use App\DocumentoTemp1;
+use App\DocumentoTemp;
+use App\DocumentoTemp2;
 
 use DB;
 use Carbon\Carbon;
@@ -214,6 +217,8 @@ class JobsController extends Controller
     public function GenerateDocumentos ()
     {
 
+        $this->createTableDocumentosTemp();
+
         $sql_users = "SELECT
             c.id AS courseid, 
             c.fullname, 
@@ -301,7 +306,7 @@ class JobsController extends Controller
                         //echo $file->fileuserid."<br>";
                         $tipo = $file->mimetype;
 
-                        $documento = new Documento();
+                        $documento = new DocumentoTemp();
                         $documento->username = $username;
                         $documento->curso_id = $curso_id;
                         $documento->nombre_curso = $nombre_curso;
@@ -321,6 +326,73 @@ class JobsController extends Controller
 
         }
 
+        Schema::dropIfExists('documentoTemp1');
+        Schema::rename("documento","documentoTemp1"); //respaldo original
+        Schema::rename("documentoTemp","documento"); //tabla actualizada
+
+        $this->checkNuevosDocumentos();
+
+        echo now();
+
     }
+
+    public function createTableDocumentosTemp()
+    {
+
+        Schema::dropIfExists('documentoTemp');
+        Schema::create('documentoTemp', function (Blueprint $table) {
+            $table->increments('id')->comment("ID incrementable de la tabla");
+            $table->string('username')->comment("rut del usuario dueño del documento");
+            $table->string('curso_id',191)->comment("id del curso");
+            $table->string('nombre_curso',191)->comment("nombre del curso");
+            $table->string('nombre_actividad',191)->comment("nombre de la actividad");
+            $table->string('nombre_archivo',191)->comment("nombre del archivo");
+            $table->string('path',191)->comment("path al archivo");
+            $table->string('tipo',191)->comment("formato del archivo");
+        });   
+        
+        Schema::dropIfExists('documentoTemp2');
+        Schema::create('documentoTemp2', function (Blueprint $table) {
+            $table->increments('id')->comment("ID incrementable de la tabla");
+            $table->string('username')->comment("rut del usuario dueño del documento");
+            $table->string('curso_id',191)->comment("id del curso");
+            $table->string('nombre_curso',191)->comment("nombre del curso");
+            $table->string('nombre_actividad',191)->comment("nombre de la actividad");
+            $table->string('nombre_archivo',191)->comment("nombre del archivo");
+            $table->string('path',191)->comment("path al archivo");
+            $table->string('tipo',191)->comment("formato del archivo");
+        });          
+
+    }  
+    
+    public function checkNuevosDocumentos()
+    {
+
+        $documentosIDS = DocumentoTemp1::select("username","nombre_curso","nombre_actividad")->groupBy("username")->get();
+
+        foreach( $documentosIDS as $n )
+        {
+
+            $username = $n["username"];
+            $nombre_curso = $n["nombre_curso"];
+            $nombre_actividad = $n["nombre_actividad"];
+
+            $documentosOriginal = DocumentoTemp1::where("username",$username)->count();
+            $documentosNueva = DocumentoTemp2::where("username",$username)->count();
+            
+            if ($documentosOriginal<$documentosNueva) 
+            {
+
+                $user = Usuario::where("rut",$username)->first();
+                $userF = UsuarioFirebase::where("usuario_id",$user["id_usuario"])->first();
+                $token = $userF["token"];
+
+                FcmNotification("Nuevo documento",$nombre_curso,$token,"cl.mmerino.comunicados.documentos");                
+
+            }
+
+        }
+
+    }    
 
 }

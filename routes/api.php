@@ -27,4 +27,4 @@ Route::get('getDocumentos/{id}','DocumentoController@getDocumentos');
 Route::get('jobusers','JobsController@GenerateUsers');
 Route::get('jobfinanzas','JobsController@GenerateFinanzas');
 Route::get('jobnotas','JobsController@GenerateNotas');
-Route::get('jobDocumentos','JobsController@GenerateDocumentos');
+Route::get('jobDocumentos','JobsController@GenerateDocumentos'); //pendiente
